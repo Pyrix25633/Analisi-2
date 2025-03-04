@@ -32,8 +32,23 @@ $p_{0}\in \mathbb{R}^{n}$ si dice punto di accumulazione per $A$ se $\mathrm{B}(
 $p_{0}\in A$ si dice punto isolato di $A$ se non è un punto di accumulazione
 
 # Limite
-$f:\mathbb{R}^{2}\to \mathbb{R}$
+$f:A \subset\mathbb{R}^{n}\to \mathbb{R}$, $p_{0}$ punto di accumulazione di $A$
 Il limite
-$$\begin{flalign}\lim_{ (x,y) \to (x_{0},y_{0}) } f(x,y)=l\in \mathbb{R} &&\end{flalign}$$
-è definito come
-$\forall\epsilon>0\;\;\exists\delta>0:|f(x,y)-l|<\epsilon\;\;\forall(x,y)\in \mathrm{B}((x_{0},y_{0}),\delta)$
+$$\begin{flalign}\exists\lim_{ p \to p_{0} } f(p)=l\in \mathbb{R} &&\end{flalign}$$
+se
+$\forall\epsilon>0\;\;\exists\delta>0:|f(p)-l|<\epsilon\;\;\forall(p)\in \mathrm{B}(p,\delta)\cap (A\setminus \{ p_{0} \})$
+
+$f,g:A\subset \mathbb{R}^{n}\to \mathbb{R}$, $p_{0}$ punto di accumulazione di $A$
+Se $\exists \lim_{ p \to p_{0} }f(p)=l\in \mathbb{R}$ e $\exists \lim_{ p \to p_{0} }g(p)=m\in \mathbb{R}\implies$
+- $\exists \lim_{ p \to p_{0} }(f(p)+g(p))=l+m$
+- $\exists \lim_{ p \to p_{0} }f(p)\cdot g(p)=l\cdot m$
+- Se $g(p)\neq0\;\;\forall p \in(A\setminus \{ p_{0} \})$ e $m\neq0\implies$$$\begin{flalign}\exists \lim_{ p \to p_{0} } \frac{f(p)}{g(p)}=\frac{l}{m} &&\end{flalign}$$
+- $F:\mathbb{R}\to \mathbb{R}$ continua, $h(p):=F(f(p))\implies$ $\exists \lim_{ p \to p_{0} }h(p)=F(l)$
+- $h:A\to \mathbb{R}$, $f(p)\leq h(p)\leq g(p)\;\;\forall p \in(A\setminus \{ p_{0} \})$ se $l=m\implies \exists \lim_{ p \to p_{0} }g(p)=l$
+
+# Limite lungo direzioni
+Funzione restrizione: $B\subset A$, $f|_{B}:B\to \mathbb{R}$, $f|_{B}(p):=f(p)$ se $p \in B$
+
+$f:A\subset \mathbb{R}^{n}\to \mathbb{R}$, $p_{0}$ punto di accumulazione di $A$, sono equivalenti:
+- $\exists \lim_{ p \to p_{0} }f(p)=l$
+- $\forall B\subset A$ per cui $p_{0}$ è punto di accumulazione di $B$ $\exists \lim_{ p \to p_{0} }f|_{B}(p)=l$

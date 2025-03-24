@@ -85,3 +85,20 @@ $F(t):=f(p+t\underline{v})$, $r\in[0,||p-q||]$ è ben definita per la prima ipot
 Per la seconda ipotesi $F$ è continua e $\exists F'(t)=\frac{\partial f}{\partial \underline{v}}(p+t\underline{v})\;\;\forall t\in(0,||q-p||)$
 Per il teorema in una variabile: $f(q)-f(p)=F(||q-p||)-F(0)=F'(t)||q-p||=\frac{\partial f}{\partial \underline{v}}(p+t\underline{v})||q-p||=$$(\nabla f(p+t\underline{v})\cdot \underline{v})||q-p||=\left( \nabla f(p+t\underline{v}) \frac{q-p}{||q-p||} \right)||q-p||$
 Scegliendo $\bar{c}=p+t\underline{v}$ otteniamo la tesi
+
+# Derivate parziali di una funzione composta
+$g:A\subset \mathbb{R}^{n}\to \mathbb{R}^{m},f:B\subset \mathbb{R}^{m}\to \mathbb{R}^{k}$
+Se:
+- $g(A)\subset B$
+- $g=(g_{1},\dots,g_{m}),f=(f_{1},\dots,f_{k})$
+- $g_{i}:A\to \mathbb{R}$ differenziabile in $x_{0}\in A$
+- $f_{i}:B\to \mathbb{R}$ differenziabile in $y_{0}=g(x_{0})\in B$
+- $h:=f\circ g$
+$$\begin{flalign}\implies Dh(x_{0})=Df(y_{0})\cdot Dg(x_{0})=\begin{bmatrix}\nabla f_{1}(y_{0}) \\
+\dots \\
+\nabla f_{k}(y_{0})
+\end{bmatrix}\cdot \begin{bmatrix}
+\nabla g_{1}(x_{0}) \\
+\dots \\
+\nabla g_{m}(x_{0})
+\end{bmatrix} &&\end{flalign}$$

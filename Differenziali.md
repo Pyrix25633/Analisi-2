@@ -119,7 +119,7 @@ $$\begin{flalign}T(x,y)=\sum_{h=0}^{m} \sum_{i=0}^{n} c_{i,n-i}(x-x_{0})^{i}(y-y
 tale che $f(p)=T(p)+o(||p-p_{0}||^{2})$
 
 # Matrice Hessiana
-$f\in C^{2}(A)$
+$f\in \mathrm{C}^{2}(A)$
 Si chiama matrice Hessiana di $f$ in $p \in A$ la matrice
 $$\begin{flalign}D^{2}f(p)=H_{f}(p):=\begin{bmatrix}
 \frac{\partial^{2}f}{\partial x^{2}}(p) & \frac{\partial^{2}f}{\partial y\partial x}(p) \\
@@ -132,3 +132,13 @@ $$\begin{flalign}D^{2}f(p)=H_{f}(p):=\begin{bmatrix}
 Osservazione: $H_{f}(p)$ è simmetrica
 
 $T_{2}(p)=f(p_{0})+\nabla f(p)(p-p_{0})+\frac{1}{2}H_{f}(p)(p-p_{0})\cdot(p-p_{0})$
+Dimostrazione:
+$p \in \mathrm{B}(po,r)$, $\underline{v}:=\frac{p-p_{0}}{||p-p_{0}||}=(v_{1},v_{2})$, $F(t):=f(p_{0}+t\underline{v})\;\;t\in(-r,r)$
+Poiché $g(t)=p_{0}+t\underline{v}\in \mathrm{C}^{2}((-r,r))$ anche $F(t)=f(g(t))\in \mathrm{C}^{2}((-r,r))$
+Applicando la formula di Taylor in una variabile per $t=0$ si ottiene
+$F(t)=F(0)+F'(0)\cdot t+\frac{1}{2}F''(0)\cdot t^{2}+o(t^{2})$
+$F'(t)=\nabla f(p+t\underline{v})\cdot \underline{v}$
+$$\begin{flalign}F''(t)=\frac{\partial^{2}f}{\partial x^{2}}(p_{0}+t\underline{v})\cdot v_{1}^{2}+2 \frac{\partial^{2} f}{\partial y\partial x}(p_{0}+t\underline{v})\cdot v_{1}\cdot v_{2}+\frac{\partial^{2}f}{\partial y^{2}}(p_{0}+t\underline{v})\cdot v_{2}^{2} &&\end{flalign}$$
+$F(0)=f(p_{0})$, $F'(0)=\nabla f(p_{0})\cdot \underline{v}$, $F''(0)=H_{f}(p_{0})\underline{v}\cdot \underline{v}$
+$F(t)=f(p_{0})+(\nabla f(p_{0})\cdot \underline{v})t+\frac{1}{2}(H_{f}(p_{0})\underline{v}\cdot \underline{v})t^{2}+o(t^{2})$
+Sostituendo $t=p-p_{0}$ e $\underline{v}$ si ottiene la tesi

@@ -102,3 +102,33 @@ $$\begin{flalign}\implies Dh(x_{0})=Df(y_{0})\cdot Dg(x_{0})=\begin{bmatrix}\nab
 \dots \\
 \nabla g_{m}(x_{0})
 \end{bmatrix} &&\end{flalign}$$
+
+# Derivate parziali di ordine superiore
+$f:A\subset \mathbb{R}^{2}\to \mathbb{R}$, $A$ aperto, se $\exists \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\implies$
+Sono dette derivate parziali seconde pure
+$$\begin{flalign} \frac{\partial^{2}f}{\partial x^{2}}:=\frac{\partial}{\partial x}\left( \frac{\partial f}{\partial x} \right),\;\;\frac{\partial^{2}f}{\partial y^{2}}:=\frac{\partial}{\partial y}\left( \frac{\partial f}{\partial y} \right) &&\end{flalign}$$
+e derivate parziali seconde miste
+$$\begin{flalign} \frac{\partial^{2}f}{\partial x\partial y}:=\frac{\partial}{\partial x}\left( \frac{\partial f}{\partial y} \right),\;\;\frac{\partial^{2}f}{\partial y\partial x}:=\frac{\partial}{\partial y}\left( \frac{\partial f}{\partial x} \right) &&\end{flalign}$$
+
+Se le derivate parziali seconde miste sono continue $\implies$ coincidono
+
+# Polinomi di Taylor
+$m\in \mathbb{N}$, $p_{0}=(x_{0},y_{0})\in \mathbb{R}^{2}$
+Si chiama polinomio di Taylor di ordine $m$ di $n=2$ variabili centrato in $p_{0}$ una funzione $T:\mathbb{R}^{2}\to \mathbb{R}$
+$$\begin{flalign}T(x,y)=\sum_{h=0}^{m} \sum_{i=0}^{n} c_{i,n-i}(x-x_{0})^{i}(y-y_{0})^{n-i}\;\;\forall(x,y)\in \mathbb{R}^{2} &&\end{flalign}$$
+tale che $f(p)=T(p)+o(||p-p_{0}||^{2})$
+
+# Matrice Hessiana
+$f\in C^{2}(A)$
+Si chiama matrice Hessiana di $f$ in $p \in A$ la matrice
+$$\begin{flalign}D^{2}f(p)=H_{f}(p):=\begin{bmatrix}
+\frac{\partial^{2}f}{\partial x^{2}}(p) & \frac{\partial^{2}f}{\partial y\partial x}(p) \\
+\frac{\partial^{2}f}{\partial x\partial y}(p) & \frac{\partial^{2}f}{\partial y^{2}}(p)
+\end{bmatrix}=\begin{bmatrix}
+\nabla \left( \frac{\partial f}{\partial x} \right) \\
+\nabla\left( \frac{\partial f}{\partial y} \right)
+\end{bmatrix} &&\end{flalign}$$
+
+Osservazione: $H_{f}(p)$ è simmetrica
+
+$T_{2}(p)=f(p_{0})+\nabla f(p)(p-p_{0})+\frac{1}{2}H_{f}(p)(p-p_{0})\cdot(p-p_{0})$

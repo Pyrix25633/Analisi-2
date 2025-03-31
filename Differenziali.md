@@ -142,3 +142,57 @@ $$\begin{flalign}F''(t)=\frac{\partial^{2}f}{\partial x^{2}}(p_{0}+t\underline{v
 $F(0)=f(p_{0})$, $F'(0)=\nabla f(p_{0})\cdot \underline{v}$, $F''(0)=H_{f}(p_{0})\underline{v}\cdot \underline{v}$
 $F(t)=f(p_{0})+(\nabla f(p_{0})\cdot \underline{v})t+\frac{1}{2}(H_{f}(p_{0})\underline{v}\cdot \underline{v})t^{2}+o(t^{2})$
 Sostituendo $t=p-p_{0}$ e $\underline{v}$ si ottiene la tesi
+
+# Massimi e minimi
+$f:A\subset \mathbb{R}^{2}\to \mathbb{R}$
+$p_{0}\in A$ si dice punto di
+- massimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(p)\leq f(p_{0})\;\;\forall p \in A\cap B(p_{0},r_{0})$
+- massimo assoluto di $f$ in $A$ se $f(p)\leq f(p_{0})\;\;\forall p \in A$
+- minimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(p)\geq f(p_{0})\;\;\forall p \in A\cap B(p_{0},r_{0})$
+- minimo assoluto di $f$ in $A$ se $f(p)\geq f(p_{0})\;\;\forall p \in A$
+Osservazione: non confondere punto di massimo e massimo di una funzione: $\mathrm{max}_{A}f:=\mathrm{max}\{ f(p):p \in A \}$ se esiste è unico
+
+I punti di massimo e minimo relativi sono detti estremi liberi
+
+$A$ aperto, se $\exists p_{0}\in A$ tale che:
+- $\exists \nabla f(p_{0})$
+- $p_{0}$ è un estremo libero di $f$ in $A$
+$\implies \nabla f(p_{0})=\underline{0}$
+Dimostrazione: $p_{0}=(x_{0},y_{0})$, $A$ aperto $\implies \exists\delta>0:p_{0}+t\underline{i}=(x_{0}+t,y_{0})\in A$ se $t\in(-\delta,\delta)$
+$F:(-\delta,\delta)\to \mathbb{R}$, $F(t)=f(p_{0}+t\underline{i})$
+Dalle ipotesi:
+- $\exists \frac{\partial f}{\partial x}(p_{0})\iff F$ è derivabile in $t=0$ e $F'(0)=\frac{\partial f}{\partial x}(p_{0})$
+- $t=0$ è un estremo libero di $F$
+Per il teorema in una variabile $F'(0)=0$, analogamente per $\underline{j}\implies \nabla f(p_{0})=(0,0)=\underline{0}$
+
+Un punto $p_{0}\in A$ si chiama punto stazionario o critico di $f$ se $\exists \nabla f(p_{0})=\underline{0}$
+
+# Matrice positiva
+$H\in M_{n}(\mathbb{R})$ si dice:
+- positiva se $H\underline{v}\cdot \underline{v}>0\;\;\forall \underline{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+- semi-definita positiva se $H\underline{v}\cdot \underline{v}\geq0\;\;\forall \underline{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+- negativa se $H\underline{v}\cdot \underline{v}<0\;\;\forall \underline{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+- semi-definita negativa se $H\underline{v}\cdot \underline{v}\leq0\;\;\forall \underline{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+
+$H=[h_{ij}]\in M_{n}(\mathbb{R})$
+$$\begin{flalign}D_{i}:=\det \begin{bmatrix}
+h_{11} & \dots & h_{1i}\\
+\dots & & \dots \\ \\
+h_{i_{1}} & \dots & h_{ii}
+\end{bmatrix}\;\;1\leq i\leq n &&\end{flalign}$$
+$H$ è:
+- positiva $\iff D_{i}>0\;\;\forall i=1,\dots,n$
+- negativa $\iff D_{i}>0$ per $i$ pari, $D_{i}<0$ per $i$ dispari
+- se $\det(H)\neq0$ e nessuna delle condizioni precedenti $\implies$ non è semi-definita
+
+Corollario: $H\in M_{2}(\mathbb{R})\implies H$ è:
+- positiva se $h_{11}>0\land \det(H)>0$
+- negativa se $h_{11}<0\land \det(H)>0$
+- se $\det(H)<0\implies$ non è semi-definita
+
+### Matrice Hessiana ed estremi liberi
+$A\subset \mathbb{R}^{n}$ aperto, $f\in \mathrm{C}^{2}(A)$, $p_{0}$ punto stazionario
+Se $H_{f}(p_{0})$ è:
+- positiva $\implies p_{0}$ è un punto di minimo relativo
+- negativa $\implies p_{0}$ è un punto di massimo relativo
+- non semi-definita $\implies p_{0}$ è un punto di sella

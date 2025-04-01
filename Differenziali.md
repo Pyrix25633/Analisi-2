@@ -150,7 +150,7 @@ $p_{0}\in A$ si dice punto di
 - massimo assoluto di $f$ in $A$ se $f(p)\leq f(p_{0})\;\;\forall p \in A$
 - minimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(p)\geq f(p_{0})\;\;\forall p \in A\cap B(p_{0},r_{0})$
 - minimo assoluto di $f$ in $A$ se $f(p)\geq f(p_{0})\;\;\forall p \in A$
-Osservazione: non confondere punto di massimo e massimo di una funzione: $\mathrm{max}_{A}f:=\mathrm{max}\{ f(p):p \in A \}$ se esiste è unico
+Osservazione: non confondere punto di massimo e massimo di una funzione: $\mathrm{Max}_{A}f:=\mathrm{Max}\{ f(p):p \in A \}$ se esiste è unico
 
 I punti di massimo e minimo relativi sono detti estremi liberi
 
@@ -196,3 +196,21 @@ Se $H_{f}(p_{0})$ è:
 - positiva $\implies p_{0}$ è un punto di minimo relativo
 - negativa $\implies p_{0}$ è un punto di massimo relativo
 - non semi-definita $\implies p_{0}$ è un punto di sella
+
+# Teorema di Weierstrass
+$f:A\subset \mathbb{R}^{n}\to \mathbb{R}$ continua su $A$ limitato e chiuso
+$\implies \exists \mathrm{Max}_{A}f=f(p_{1})\land \exists \mathrm{Min}_{A}f=f(p_{2})\;\;p_{i}\in A\;\;i=1,\dots,n$
+si verifica una delle seguenti per ogni punto:
+- $p_{i}\in \mathring{A} \land \exists \nabla f(p_{i})=\underline{0}$
+- $p_{i}\in\mathring{A} \land \nexists \nabla f(p_{i})$
+- $p_{i}\in \partial A$
+
+# Parametrizzazione
+Si chiama parametrizzazione della frontiera $\partial A$ una funzione $\gamma:B\subset \mathbb{R}^{n}\to A\subset \mathbb{R}^{n+1}$, $\gamma(t_{1},\dots,t_{n})=(\gamma_{1}(t),\dots,\gamma_{n+1}(t))$, con le seguenti proprietà:
+- $B$ chiuso e limitato
+- $\gamma(B)=\partial A$
+- $\gamma_{1},\dots ,\gamma_{n+1}\in \mathrm{C}^{0}(B)\cap \mathrm{C}^{1}(\mathring{B})$
+$f:A\to \mathbb{R}$, $f\in \mathrm{C}^{1}(A)$ da massimizzare/minimizzare sulla frontiera
+$F:B\to \mathbb{R}$, $F(t_{1},\dots,t_{n}):=f(\gamma(t_{1},\dots,t_{n}))\implies$
+- $\mathrm{Max}_{\partial A}f=\mathrm{Max}_{B}F$
+- $\mathrm{Min}_{\partial A}f=\mathrm{Min}_{B}F$

@@ -25,6 +25,7 @@ Se $f$ è differenziabile in $p_{0}\implies \exists \nabla f(p_{0})$ e $a=\frac{
 Dimostrazione:
 Se $y=y_{0}\implies$$$\begin{flalign}\exists \lim_{ x \to x_{0} } \frac{f(x,y_{0})-[a(x-x_{0})+f(x_{0},y_{0})]}{|x-x_{0}|}\iff \exists \lim_{ x \to x_{0} } \frac{f(x,y_{0})-f(x_{0},y_{0})}{x-x_{0}}=a\iff \exists \frac{\partial f}{\partial x}(p_{0})=a &&\end{flalign}$$
 Analogamente con $x=x_{0}$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Differenziale
 L'applicazione lineare $L:\mathbb{R}^{2}\to \mathbb{R}\;\;\;L(v_{1},v_{2}):=\frac{\partial f}{\partial x}(p_{0})\cdot v_{1}+\frac{\partial f}{\partial y}(p_{0})\cdot v_{2}\;\;\forall (v_{1},v_{2})\in \mathbb{R}^{2}$ si chiama differenziale di $f$ in $p_{0}$ denotato anche come $df(p_{0})=\frac{\partial f}{\partial x}(p_{0})dx+\frac{\partial f}{\partial y}(p_{0})dy$
@@ -46,6 +47,7 @@ Se:
 - $\exists \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}:A\to \mathbb{R}$
 - $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}$ continue in $p_{0}$
 $\implies f$ è differenziabile in $p_{0}$
+
 Osservazione: è sufficiente richiedere le ipotesi su un intorno di $p_{0}$
 
 $f$ si dice differenziabile in $p_{0}$ se $\exists L:\mathbb{R}^{2}\to \mathbb{R}$ lineare tale che
@@ -58,6 +60,7 @@ $f$ si dice differenziabile su $A$ se è differenziabile in ogni punto di $A$
 $f$ si dice di classe $\mathrm{C}^{1}(A)$ se è continua ed $\exists \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}:A\to \mathbb{R}$ continue
 
 Corollario: $f\in \mathrm{C}^{1}\implies f$ è differenziabile in ogni punto $p_{0}\in A$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Derivate direzionali
 $\underline{v}$ si dice direzione se $||\underline{v}||=1$
@@ -78,6 +81,7 @@ $f:A\subset \mathbb{R}^{2}\to \mathbb{R}$, $A$ aperto, $f:A\to \mathbb{R}$
 Se:
 - $\exists p,q\in A:[p,q]:=\{ tq+(1-t)p: t\in[0,1] \}\subset A$
 - $f$ è continua su $[p,q]$ e differenziabile su $(p,q)$
+
 $\implies \exists\bar{c}\in(p,q):f(q)-f(p)=\nabla f(\bar{c})(q-p)$
 Dimostrazione: supponiamo $p\neq q$
 $\underline{v}=\frac{q-p}{||q-p||}$ direzione di $\mathbb{R}^{2}$
@@ -85,6 +89,7 @@ $F(t):=f(p+t\underline{v})$, $r\in[0,||p-q||]$ è ben definita per la prima ipot
 Per la seconda ipotesi $F$ è continua e $\exists F'(t)=\frac{\partial f}{\partial \underline{v}}(p+t\underline{v})\;\;\forall t\in(0,||q-p||)$
 Per il teorema in una variabile: $f(q)-f(p)=F(||q-p||)-F(0)=F'(t)||q-p||=\frac{\partial f}{\partial \underline{v}}(p+t\underline{v})||q-p||=$$(\nabla f(p+t\underline{v})\cdot \underline{v})||q-p||=\left( \nabla f(p+t\underline{v}) \frac{q-p}{||q-p||} \right)||q-p||$
 Scegliendo $\bar{c}=p+t\underline{v}$ otteniamo la tesi
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Derivate parziali di una funzione composta
 $g:A\subset \mathbb{R}^{n}\to \mathbb{R}^{m},f:B\subset \mathbb{R}^{m}\to \mathbb{R}^{k}$
@@ -94,6 +99,7 @@ Se:
 - $g_{i}:A\to \mathbb{R}$ differenziabile in $x_{0}\in A$
 - $f_{i}:B\to \mathbb{R}$ differenziabile in $y_{0}=g(x_{0})\in B$
 - $h:=f\circ g$
+
 $$\begin{flalign}\implies Dh(x_{0})=Df(y_{0})\cdot Dg(x_{0})=\begin{bmatrix}\nabla f_{1}(y_{0}) \\
 \dots \\
 \nabla f_{k}(y_{0})
@@ -132,6 +138,8 @@ $$\begin{flalign}D^{2}f(p)=H_{f}(p):=\begin{bmatrix}
 Osservazione: $H_{f}(p)$ è simmetrica
 
 $T_{2}(p)=f(p_{0})+\nabla f(p)(p-p_{0})+\frac{1}{2}H_{f}(p)(p-p_{0})\cdot(p-p_{0})$
+<div class="page-break" style="page-break-before: always;"></div>
+
 Dimostrazione:
 $p \in \mathrm{B}(po,r)$, $\underline{v}:=\frac{p-p_{0}}{||p-p_{0}||}=(v_{1},v_{2})$, $F(t):=f(p_{0}+t\underline{v})\;\;t\in(-r,r)$
 Poiché $g(t)=p_{0}+t\underline{v}\in \mathrm{C}^{2}((-r,r))$ anche $F(t)=f(g(t))\in \mathrm{C}^{2}((-r,r))$
@@ -150,6 +158,7 @@ $p_{0}\in A$ si dice punto di
 - massimo assoluto di $f$ in $A$ se $f(p)\leq f(p_{0})\;\;\forall p \in A$
 - minimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(p)\geq f(p_{0})\;\;\forall p \in A\cap B(p_{0},r_{0})$
 - minimo assoluto di $f$ in $A$ se $f(p)\geq f(p_{0})\;\;\forall p \in A$
+
 Osservazione: non confondere punto di massimo e massimo di una funzione: $\mathrm{Max}_{A}f:=\mathrm{Max}\{ f(p):p \in A \}$ se esiste è unico
 
 I punti di massimo e minimo relativi sono detti estremi liberi
@@ -166,6 +175,7 @@ Dalle ipotesi:
 Per il teorema in una variabile $F'(0)=0$, analogamente per $\underline{j}\implies \nabla f(p_{0})=(0,0)=\underline{0}$
 
 Un punto $p_{0}\in A$ si chiama punto stazionario o critico di $f$ se $\exists \nabla f(p_{0})=\underline{0}$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Matrice positiva
 $H\in M_{n}(\mathbb{R})$ si dice:
@@ -204,12 +214,14 @@ si verifica una delle seguenti per ogni punto:
 - $p_{i}\in \mathring{A} \land \exists \nabla f(p_{i})=\underline{0}$
 - $p_{i}\in\mathring{A} \land \nexists \nabla f(p_{i})$
 - $p_{i}\in \partial A$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Parametrizzazione
 Si chiama parametrizzazione della frontiera $\partial A$ una funzione $\gamma:B\subset \mathbb{R}^{n}\to A\subset \mathbb{R}^{n+1}$, $\gamma(t_{1},\dots,t_{n})=(\gamma_{1}(t),\dots,\gamma_{n+1}(t))$, con le seguenti proprietà:
 - $B$ chiuso e limitato
 - $\gamma(B)=\partial A$
 - $\gamma_{1},\dots ,\gamma_{n+1}\in \mathrm{C}^{0}(B)\cap \mathrm{C}^{1}(\mathring{B})$
+
 $f:A\to \mathbb{R}$, $f\in \mathrm{C}^{1}(A)$ da massimizzare/minimizzare sulla frontiera
 $F:B\to \mathbb{R}$, $F(t_{1},\dots,t_{n}):=f(\gamma(t_{1},\dots,t_{n}))\implies$
 - $\mathrm{Max}_{\partial A}f=\mathrm{Max}_{B}F$

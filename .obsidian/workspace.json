@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Differenziali.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -166,8 +166,11 @@
   },
   "active": "e8970b7be1fb0c2b",
   "lastOpenFiles": [
+    "pdf/Differenziali.pdf",
     "Notazione.md",
+    "pdf/Notazione.pdf",
     "Differenziali.md",
+    "pdf",
     "README.md",
     "Successioni.md",
     "Proprietà delle funzioni continue.md",
@@ -188,8 +191,6 @@
     "pdf/Polinomi di Taylor.pdf",
     "pdf/Derivate.pdf",
     "pdf/Proprietà delle funzioni continue.pdf",
-    "pdf/Limiti.pdf",
-    "pdf/Successioni.pdf",
     "Trasformazioni di funzioni.md",
     "Pasted image 20241230094656.png",
     "Pasted image 20241230094004.png",

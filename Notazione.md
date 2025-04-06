@@ -30,6 +30,7 @@ $p_{0}\in \mathbb{R}^{n}$ si dice punto di accumulazione per $A$ se $\mathrm{B}(
 
 ### Punto isolato
 $p_{0}\in A$ si dice punto isolato di $A$ se non è un punto di accumulazione
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Limite
 $f:A \subset\mathbb{R}^{n}\to \mathbb{R}$, $p_{0}$ punto di accumulazione di $A$

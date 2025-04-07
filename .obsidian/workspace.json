@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notazione.md",
-                "mode": "preview",
+                "file": "Differenziali.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notazione"
+              "title": "Differenziali"
             }
           }
         ]
@@ -166,9 +166,9 @@
   },
   "active": "06de5136c320564f",
   "lastOpenFiles": [
+    "Notazione.md",
     "Differenziali.md",
     "pdf/Differenziali.pdf",
-    "Notazione.md",
     "pdf/Notazione.pdf",
     "pdf",
     "README.md",

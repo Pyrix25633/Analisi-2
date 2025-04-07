@@ -43,10 +43,10 @@ $L:\mathbb{R}^{n}\to \mathbb{R}$, $L(\hat{v}):=\sum_{i=1}^{n} \frac{\partial f}{
 ### Continuità
 $f:A\subset \mathbb{R}^{n}\to \mathbb{R}$, $A$ aperto, $f$ differenziabile in $\underline{p_{0}}\in A\implies f$ è continua in $\underline{p_{0}}$
 Dimostrazione:
-$$\begin{flalign}\exists \lim_{ p \to \underline{p_{0}} } \frac{f(p)-[df(\underline{p_{0}})(p-\underline{p_{0}})+f(\underline{p_{0}})]}{\mathrm{d}(p,\underline{p_{0}})}=0 &&\end{flalign}$$
-$L(v_{1},v_{2})=df(\underline{p_{0}})(v_{1},v_{2})$
-$$\begin{flalign}f(p)-f(\underline{p_{0}})=\frac{f(p)-[L(p-\underline{p_{0}})+f(\underline{p_{0}})]}{\mathrm{d}(p,\underline{p_{0}})} \cdot \mathrm{d(p,\underline{p_{0}})}+L(p-\underline{p_{0}})&&\end{flalign}$$
-$\lim_{ p \to \underline{p_{0}} }L(p-\underline{p_{0}})\implies \exists \lim_{ p \to \underline{p_{0}} }f(p)-f(\underline{p_{0}})=0$
+$$\begin{flalign}\exists \lim_{ \underline{p} \to \underline{p_{0}} } \frac{f(\underline{p})-[df(\underline{p_{0}})(\underline{p}-\underline{p_{0}})+f(\underline{p_{0}})]}{\mathrm{d}(\underline{p},\underline{p_{0}})}=0 &&\end{flalign}$$
+$L(\hat{v})=df(\underline{p_{0}})(\hat{v})$
+$$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L(\underline{p}-\underline{p_{0}})+f(\underline{p_{0}})]}{\mathrm{d}(\underline{p},\underline{p_{0}})} \cdot \mathrm{d}(\underline{p},\underline{p_{0}})+L(\underline{p}-\underline{p_{0}})&&\end{flalign}$$
+$\lim_{ \underline{p} \to \underline{p_{0}} }L(\underline{p}-\underline{p_{0}})\implies \exists \lim_{ \underline{p} \to \underline{p_{0}} }f(\underline{p})-f(\underline{p_{0}})=0$
 
 # Condizioni sulle derivate parziali che assicurano la differenziabilità
 
@@ -62,7 +62,7 @@ $\implies f$ è differenziabile in $\underline{p_{0}}$
 Osservazione: è sufficiente richiedere le ipotesi su un intorno di $\underline{p_{0}}$
 
 $f$ si dice differenziabile in $\underline{p_{0}}$ se $\exists L:\mathbb{R}^{2}\to \mathbb{R}$ lineare tale che
-$$\begin{flalign}\exists \lim_{ p \to \underline{p_{0}} } \frac{f(p)-f(\underline{p_{0}})-L(p-\underline{p_{0}})}{\mathrm{d}(p,\underline{p_{0}})}=0 \implies&&\end{flalign}$$
+$$\begin{flalign}\exists \lim_{ \underline{p} \to \underline{p_{0}} } \frac{f(\underline{p})-f(\underline{p_{0}})-L(\underline{p} -\underline{p_{0}})}{\mathrm{d}(\underline{p},\underline{p_{0}})}=0 \implies&&\end{flalign}$$
 - $\exists \nabla f(\underline{p_{0}})$
 - $L(\hat{v})=\nabla f(\underline{p_{0}})\cdot \hat{v}$
 - $f$ è continua in $\underline{p_{0}}$
@@ -81,8 +81,8 @@ $$\begin{flalign}\exists \frac{\partial f}{\partial \hat{v}}(\underline{p_{0}})\
 
 $f$ differenziabile in $\underline{p_{0}}\implies \exists \frac{\partial f}{\partial \hat{v}}(\underline{p_{0}})=df(\underline{p_{0}})(\hat{v})=\nabla f(\underline{p_{0}})\cdot \hat{v}$
 Dimostrazione: per ipotesi $f$ è differenziabile in $\underline{p_{0}}\implies$
-$$\begin{flalign}\exists \lim_{ p \to \underline{p_{0}} } \frac{f(p)-f(\underline{p_{0}})-\nabla f(\underline{p_{0}})\cdot(p-\underline{p_{0}})}{\mathrm{d}(p,\underline{p_{0}})}=0 &&\end{flalign}$$
-che è equivalente a $f(p)=f(\underline{p_{0}})+\nabla f(\underline{p_{0}})\cdot(p-\underline{p_{0}})+o(\mathrm{d}(p,\underline{p_{0}}))\;\;\forall p \in A$
+$$\begin{flalign}\exists \lim_{ \underline{p} \to \underline{p_{0}} } \frac{f(\underline{p})-f(\underline{p_{0}})-\nabla f(\underline{p_{0}})\cdot(\underline{p} -\underline{p_{0}})}{\mathrm{d}(p,\underline{p_{0}})}=0 &&\end{flalign}$$
+che è equivalente a $f(\underline{p})=f(\underline{p_{0}})+\nabla f(\underline{p_{0}})\cdot(\underline{p} -\underline{p_{0}})+o(\mathrm{d}(p,\underline{p_{0}}))\;\;\forall \underline{p} \in A$
 si ottiene $F(h):=f(\underline{p_{0}}+h\hat{v})=f(\underline{p_{0}})+\nabla f(\underline{p_{0}})\cdot(h\hat{v})+o(\mathrm{d}(\underline{p_{0}}+h\hat{v},\underline{p_{0}}))=F(0)+h(\nabla f(\underline{p_{0}})\cdot \hat{v})+o(|h|)$
 Segue che $\exists F'(0):=\lim_{ h \to 0 }F(h)-F(0)=\nabla f(\underline{p_{0}})\cdot \hat{v}=df(\underline{p_{0}})(\hat{v})$
 
@@ -107,8 +107,8 @@ $g:A\subset \mathbb{R}^{n}\to \mathbb{R}^{m},f:B\subset \mathbb{R}^{m}\to \mathb
 Se:
 - $g(A)\subset B$
 - $g=(g_{1},\dots,g_{m}),f=(f_{1},\dots,f_{k})$
-- $g_{i}:A\to \mathbb{R}$ differenziabile in $x_{0}\in A$
-- $f_{i}:B\to \mathbb{R}$ differenziabile in $y_{0}=g(x_{0})\in B$
+- $g_{i}:A\to \mathbb{R}$ differenziabile in $x_{0}\in A\;\;\forall i\in \{ 1,\dots,m \}$
+- $f_{j}:B\to \mathbb{R}$ differenziabile in $y_{0}=g(x_{0})\in B\;\;\forall j\in \{ 1,\dots,k \}$
 - $h:=f\circ g$
 
 $$\begin{flalign}\implies Dh(x_{0})=Df(y_{0})\cdot Dg(x_{0})=\begin{bmatrix}\nabla f_{1}(y_{0}) \\
@@ -133,43 +133,43 @@ Se le derivate parziali seconde miste sono continue $\implies$ coincidono
 $m\in \mathbb{N}$, $\underline{p_{0}}=(x_{0},y_{0})\in \mathbb{R}^{2}$
 Si chiama polinomio di Taylor di ordine $m$ di $n=2$ variabili centrato in $\underline{p_{0}}$ una funzione $T:\mathbb{R}^{2}\to \mathbb{R}$
 $$\begin{flalign}T(x,y)=\sum_{h=0}^{m} \sum_{i=0}^{n} c_{i,n-i}(x-x_{0})^{i}(y-y_{0})^{n-i}\;\;\forall(x,y)\in \mathbb{R}^{2} &&\end{flalign}$$
-tale che $f(p)=T(p)+o(||p-\underline{p_{0}}||^{2})$
+tale che $f(\underline{p})=T(\underline{p})+o(||\underline{p} -\underline{p_{0}}||^{2})$
 <div class="page-break" style="page-break-before: always;"></div>
 
 # Matrice Hessiana
 $f\in \mathrm{C}^{2}(A)$
 Si chiama matrice Hessiana di $f$ in $p \in A$ la matrice
-$$\begin{flalign}D^{2}f(p)=H_{f}(p):=\begin{bmatrix}
-\frac{\partial^{2}f}{\partial x^{2}}(p) & \frac{\partial^{2}f}{\partial y\partial x}(p) \\
-\frac{\partial^{2}f}{\partial x\partial y}(p) & \frac{\partial^{2}f}{\partial y^{2}}(p)
+$$\begin{flalign}D^{2}f(\underline{p})=H_{f}(\underline{p}):=\begin{bmatrix}
+\frac{\partial^{2}f}{\partial x^{2}}(\underline{p}) & \frac{\partial^{2}f}{\partial y\partial x}(\underline{p}) \\
+\frac{\partial^{2}f}{\partial x\partial y}(\underline{p}) & \frac{\partial^{2}f}{\partial y^{2}}(\underline{p})
 \end{bmatrix}=\begin{bmatrix}
 \nabla \left( \frac{\partial f}{\partial x} \right) \\
 \nabla\left( \frac{\partial f}{\partial y} \right)
 \end{bmatrix} &&\end{flalign}$$
 
-Osservazione: $H_{f}(p)$ è simmetrica
+Osservazione: $H_{f}(\underline{p})$ è simmetrica
 
-$T_{2}(p)=f(\underline{p_{0}})+\nabla f(p)(p-\underline{p_{0}})+\frac{1}{2}H_{f}(p)(p-\underline{p_{0}})\cdot(p-\underline{p_{0}})$
+$T_{2}(\underline{p})=f(\underline{p_{0}})+\nabla f(\underline{p})(\underline{p} -\underline{p_{0}})+\frac{1}{2}H_{f}(\underline{p})(\underline{p} -\underline{p_{0}})\cdot(\underline{p} -\underline{p_{0}})$
 Dimostrazione:
-$p \in \mathrm{B}(po,r)$, $\hat{v}:=\frac{p-\underline{p_{0}}}{||p-\underline{p_{0}}||}=(v_{1},v_{2})$, $F(t):=f(\underline{p_{0}}+t\hat{v})\;\;t\in(-r,r)$
+$\underline{p} \in \mathrm{B}(\underline{p_{0}},r)$, $\hat{v}:=\frac{\underline{p} -\underline{p_{0}}}{||\underline{p} -\underline{p_{0}}||}=(v_{1},v_{2})$, $F(t):=f(\underline{p_{0}}+t\hat{v})\;\;t\in(-r,r)$
 Poiché $g(t)=\underline{p_{0}}+t\hat{v}\in \mathrm{C}^{2}((-r,r))$ anche $F(t)=f(g(t))\in \mathrm{C}^{2}((-r,r))$
 Applicando la formula di Taylor in una variabile per $t=0$ si ottiene
 $F(t)=F(0)+F'(0)\cdot t+\frac{1}{2}F''(0)\cdot t^{2}+o(t^{2})$
-$F'(t)=\nabla f(p+t\hat{v})\cdot \hat{v}$
+$F'(t)=\nabla f(\underline{p}+t\hat{v})\cdot \hat{v}$
 $$\begin{flalign}F''(t)=\frac{\partial^{2}f}{\partial x^{2}}(\underline{p_{0}}+t\hat{v})\cdot v_{1}^{2}+2 \frac{\partial^{2} f}{\partial y\partial x}(\underline{p_{0}}+t\hat{v})\cdot v_{1}\cdot v_{2}+\frac{\partial^{2}f}{\partial y^{2}}(\underline{p_{0}}+t\hat{v})\cdot v_{2}^{2} &&\end{flalign}$$
 $F(0)=f(\underline{p_{0}})$, $F'(0)=\nabla f(\underline{p_{0}})\cdot \hat{v}$, $F''(0)=H_{f}(\underline{p_{0}})\hat{v}\cdot \hat{v}$
 $F(t)=f(\underline{p_{0}})+(\nabla f(\underline{p_{0}})\cdot \hat{v})t+\frac{1}{2}(H_{f}(\underline{p_{0}})\hat{v}\cdot \hat{v})t^{2}+o(t^{2})$
-Sostituendo $t=p-\underline{p_{0}}$ e $\hat{v}$ si ottiene la tesi
+Sostituendo $t=\underline{p} -\underline{p_{0}}$ e $\hat{v}$ si ottiene la tesi
 
 # Massimi e minimi
 $f:A\subset \mathbb{R}^{2}\to \mathbb{R}$
 $\underline{p_{0}}\in A$ si dice punto di
-- massimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(p)\leq f(\underline{p_{0}})\;\;\forall p \in A\cap B(\underline{p_{0}},r_{0})$
-- massimo assoluto di $f$ in $A$ se $f(p)\leq f(\underline{p_{0}})\;\;\forall p \in A$
-- minimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(p)\geq f(\underline{p_{0}})\;\;\forall p \in A\cap B(\underline{p_{0}},r_{0})$
-- minimo assoluto di $f$ in $A$ se $f(p)\geq f(\underline{p_{0}})\;\;\forall p \in A$
+- massimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(\underline{p})\leq f(\underline{p_{0}})\;\;\forall \underline{p} \in A\cap B(\underline{p_{0}},r_{0})$
+- massimo assoluto di $f$ in $A$ se $f(\underline{p})\leq f(\underline{p_{0}})\;\;\forall \underline{p} \in A$
+- minimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(\underline{p})\geq f(\underline{p_{0}})\;\;\forall \underline{p} \in A\cap B(\underline{p_{0}},r_{0})$
+- minimo assoluto di $f$ in $A$ se $f(\underline{p})\geq f(\underline{p_{0}})\;\;\forall \underline{p} \in A$
 
-Osservazione: non confondere punto di massimo e massimo di una funzione: $\mathrm{Max}_{A}f:=\mathrm{Max}\{ f(p):p \in A \}$ se esiste è unico
+Osservazione: non confondere punto di massimo e massimo di una funzione: $\mathrm{Max}_{A}f:=\mathrm{Max}\{ f(\underline{p}):p \in A \}$ se esiste è unico
 
 I punti di massimo e minimo relativi sono detti estremi liberi
 
@@ -239,3 +239,41 @@ $f:A\to \mathbb{R}$, $f\in \mathrm{C}^{1}(A)$ da massimizzare/minimizzare sulla 
 $F:B\to \mathbb{R}$, $F(t_{1},\dots,t_{n}):=f(\gamma(t_{1},\dots,t_{n}))\implies$
 - $\mathrm{Max}_{\partial A}f=\mathrm{Max}_{B}F$
 - $\mathrm{Min}_{\partial A}f=\mathrm{Min}_{B}F$
+
+# Metodo dei moltiplicatori di Lagrange
+Se $A:=\{ (x,y)\in \mathbb{R}^{2}:g(x,y)\leq0 \}\implies \partial A=\{ (x,y)\in \mathbb{R}^{2}:g(x,y)=0 \}$
+Un insieme del piano $V:=\partial A$ è detto vincolo ed è una curva
+
+$f,g\in \mathrm{C}^{1}(\mathbb{R}^{2})$, $V$ vincolo
+Se:
+- $\exists \mathrm{Min}_{V}f=f(p_{0})\;\;p_{0}\in V$ (o $\mathrm{Max}$)
+- $\exists \nabla g(p_{0})\neq(0,0)$
+
+$\implies \exists \lambda_{0}$ detto moltiplicatore tale che $(x_{0},y_{0},\lambda_{0})$ è un punto stazionario di $L(x,y,\lambda):=f(x,y)+\lambda \cdot g(x,y)$ detta funzione lagrangiana
+Equivalentemente $\exists \lambda_{0}\in \mathbb{R}:g(p_{0})=0\land \nabla f(\underline{p_{0}})=-\lambda \nabla g(\underline{p_{0}})$
+
+Un punto $\underline{p_{0}}\in V$ verificante tali condizioni per un opportuno $\lambda_{0}$ si dice punto stazionario di $f$ rispetto a $V$
+
+Se $g(\underline{p_{0}})=0$ e $\exists \frac{\partial g}{\partial y}(\underline{p_{0}})\neq0$ (o analogamente con $x$) $\implies V$ è localmente grafico di una funzione $y=\varphi(x)$, cioè $\exists\delta>0$ e $\varphi:(x_{0}-\delta,x_{0}+\delta)\to \mathbb{R}$, $\exists r>0$ tali che
+- $V\cap \mathrm{B}(\underline{p_{0}},r)=\{ (x,\varphi(x)):x \in(x_{0}-\delta,x_{0}+\delta) \}$
+- $\varphi$ è derivabile e $$\begin{flalign}\varphi'(x)=- \frac{\frac{\partial g}{\partial x}(x,\varphi(x))}{\frac{\partial g}{\partial y}(x,\varphi(x))}\;\;\forall x \in(x_{0}-\delta,x_{0}+\delta) &&\end{flalign}$$
+
+Dimostrazione del teorema dei moltiplicatori di Lagrange:
+Se $\frac{\partial g}{\partial y}(\underline{p_{0}})\neq0$ (analogamente con $x$), $h:=f(x,\varphi(x))\;\;x \in(x_{0}-\delta,x_{0}+\delta)$
+Essendo $\underline{p_{0}}\in V$ punto di minimo di $f$ su $V\implies x_{0}$ è un punto di minimo di $h$ su $(x_{0}-\delta,x_{0}+\delta)$ e $h\in \mathrm{C}^{1}((x_{0}-\delta,x_{0}+\delta))$
+Per quanto visto prima
+$$\begin{flalign}0=h'(x_{0})=\frac{\partial f}{\partial x}(x_{0},\varphi(x_{0}))+\frac{\partial f}{\partial y}(x_{0},\varphi(x_{0}))\varphi'(x_{0})=\frac{\partial f}{\partial x}(\underline{p_{0}})-\frac{\partial f}{\partial y}(\underline{p_{0}}) \frac{\frac{\partial g}{\partial x}(\underline{p_{0}})}{\frac{\partial g}{\partial y}(\underline{p_{0}})} &&\end{flalign}$$
+$$\begin{flalign}\iff \det \begin{bmatrix}
+\frac{\partial f}{\partial x}(\underline{p_{0}}) & \frac{\partial f}{\partial y}(\underline{p_{0}}) \\
+\frac{\partial g}{\partial x}(\underline{p_{0}}) & \frac{\partial g}{\partial y}(\underline{p_{0}})
+\end{bmatrix}=\det \begin{bmatrix}
+\nabla f(\underline{p_{0}}) \\
+\nabla g(\underline{p_{0}})
+\end{bmatrix}=0\iff \exists \lambda_{0}\in \mathbb{R}:\nabla f(\underline{p_{0}})=-\lambda_{0}\cdot \nabla g(\underline{p_{0}}) &&\end{flalign}$$
+
+$f,g\in \mathrm{C}^{1}(\mathbb{R}^{3})$, $V:=\{ (x,y,z)\in\mathbb{R}^{3}: g(x,y,z)=0\}$
+Se:
+- $\exists \mathrm{Min}_{V}f=f(\underline{p_{0}})$ (o $\mathrm{Max}$)
+- $\nabla g(\underline{p_{0}})\neq(0,0,0)$
+
+$\implies \exists \lambda_{0}\in \mathbb{R}:\nabla f(\underline{p_{0}})=-\lambda_{0}\cdot \nabla g(\underline{p_{0}})$

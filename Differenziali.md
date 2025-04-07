@@ -254,6 +254,8 @@ Equivalentemente $\exists \lambda_{0}\in \mathbb{R}:g(p_{0})=0\land \nabla f(\un
 
 Un punto $\underline{p_{0}}\in V$ verificante tali condizioni per un opportuno $\lambda_{0}$ si dice punto stazionario di $f$ rispetto a $V$
 
+<div class="page-break" style="page-break-before: always;"></div>
+
 Se $g(\underline{p_{0}})=0$ e $\exists \frac{\partial g}{\partial y}(\underline{p_{0}})\neq0$ (o analogamente con $x$) $\implies V$ è localmente grafico di una funzione $y=\varphi(x)$, cioè $\exists\delta>0$ e $\varphi:(x_{0}-\delta,x_{0}+\delta)\to \mathbb{R}$, $\exists r>0$ tali che
 - $V\cap \mathrm{B}(\underline{p_{0}},r)=\{ (x,\varphi(x)):x \in(x_{0}-\delta,x_{0}+\delta) \}$
 - $\varphi$ è derivabile e $$\begin{flalign}\varphi'(x)=- \frac{\frac{\partial g}{\partial x}(x,\varphi(x))}{\frac{\partial g}{\partial y}(x,\varphi(x))}\;\;\forall x \in(x_{0}-\delta,x_{0}+\delta) &&\end{flalign}$$

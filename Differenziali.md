@@ -133,7 +133,7 @@ Se le derivate parziali seconde miste sono continue $\implies$ coincidono
 $m\in \mathbb{N}$, $\underline{p_{0}}=(x_{0},y_{0})\in \mathbb{R}^{2}$
 Si chiama polinomio di Taylor di ordine $m$ di $n=2$ variabili centrato in $\underline{p_{0}}$ una funzione $T:\mathbb{R}^{2}\to \mathbb{R}$
 $$\begin{flalign}T(x,y)=\sum_{h=0}^{m} \sum_{i=0}^{n} c_{i,n-i}(x-x_{0})^{i}(y-y_{0})^{n-i}\;\;\forall(x,y)\in \mathbb{R}^{2} &&\end{flalign}$$
-tale che $f(\underline{p})=T(\underline{p})+o(||\underline{p} -\underline{p_{0}}||^{2})$
+tale che $f(\underline{p})=T(\underline{p})+o(||\underline{p} -\underline{p_{0}}||^{m})$
 <div class="page-break" style="page-break-before: always;"></div>
 
 # Matrice Hessiana

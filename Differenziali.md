@@ -107,17 +107,17 @@ $g:A\subset \mathbb{R}^{n}\to \mathbb{R}^{m},f:B\subset \mathbb{R}^{m}\to \mathb
 Se:
 - $g(A)\subset B$
 - $g=(g_{1},\dots,g_{m}),f=(f_{1},\dots,f_{k})$
-- $g_{i}:A\to \mathbb{R}$ differenziabile in $x_{0}\in A\;\;\forall i\in \{ 1,\dots,m \}$
-- $f_{j}:B\to \mathbb{R}$ differenziabile in $y_{0}=g(x_{0})\in B\;\;\forall j\in \{ 1,\dots,k \}$
+- $g_{i}:A\to \mathbb{R}$ differenziabile in $\underline{x_{0}}\in A\;\;\forall i\in \{ 1,\dots,m \}$
+- $f_{j}:B\to \mathbb{R}$ differenziabile in $\underline{y_{0}}=g(\underline{x_{0}})\in B\;\;\forall j\in \{ 1,\dots,k \}$
 - $h:=f\circ g$
 
-$$\begin{flalign}\implies Dh(x_{0})=Df(y_{0})\cdot Dg(x_{0})=\begin{bmatrix}\nabla f_{1}(y_{0}) \\
+$$\begin{flalign}\implies Dh(\underline{x_{0}})=Df(\underline{y_{0}})\cdot Dg(\underline{x_{0}})=\begin{bmatrix}\nabla f_{1}(\underline{y_{0}}) \\
 \dots \\
-\nabla f_{k}(y_{0})
+\nabla f_{k}(\underline{y_{0}})
 \end{bmatrix}\cdot \begin{bmatrix}
-\nabla g_{1}(x_{0}) \\
+\nabla g_{1}(\underline{x_{0}}) \\
 \dots \\
-\nabla g_{m}(x_{0})
+\nabla g_{m}(\underline{x_{0}})
 \end{bmatrix} &&\end{flalign}$$
 
 # Derivate parziali di ordine superiore

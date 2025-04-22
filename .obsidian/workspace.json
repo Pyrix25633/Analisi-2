@@ -13,8 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Differenziali.md",
+                "file": "Integrali.md",
                 "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Integrali"
+            }
+          },
+          {
+            "id": "e3843a696cb3770e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Differenziali.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -166,8 +180,10 @@
   },
   "active": "06de5136c320564f",
   "lastOpenFiles": [
-    "Notazione.md",
+    "pdf/Integrali.pdf",
     "Differenziali.md",
+    "Integrali.md",
+    "Notazione.md",
     "pdf/Differenziali.pdf",
     "pdf/Notazione.pdf",
     "pdf",
@@ -181,13 +197,11 @@
     "Equazioni differenziali ordinarie.md",
     "Formulario.md",
     "pdf/Formulario.pdf",
-    "Integrali.md",
     "Polinomi di Taylor.md",
     "Numeri complessi.md",
     "Formulario formattato.pdf",
     "pdf/Equazioni differenziali ordinarie.pdf",
     "pdf/Serie numeriche.pdf",
-    "pdf/Integrali.pdf",
     "pdf/Polinomi di Taylor.pdf",
     "pdf/Derivate.pdf",
     "Trasformazioni di funzioni.md",

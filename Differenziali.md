@@ -246,13 +246,21 @@ Un insieme del piano $V:=\partial A$ è detto vincolo ed è una curva
 
 $f,g\in \mathrm{C}^{1}(\mathbb{R}^{2})$, $V$ vincolo
 Se:
-- $\exists \mathrm{Min}_{V}f=f(p_{0})\;\;p_{0}\in V$ (o $\mathrm{Max}$)
-- $\exists \nabla g(p_{0})\neq(0,0)$
+- $\exists \mathrm{Min}_{V}f=f(\underline{p_{0}})\;\;\underline{p_{0}}\in V$ (o $\mathrm{Max}$)
+- $\exists \nabla g(\underline{p_{0}})\neq(0,0)$
 
 $\implies \exists \lambda_{0}$ detto moltiplicatore tale che $(x_{0},y_{0},\lambda_{0})$ è un punto stazionario di $L(x,y,\lambda):=f(x,y)+\lambda \cdot g(x,y)$ detta funzione lagrangiana
-Equivalentemente $\exists \lambda_{0}\in \mathbb{R}:g(p_{0})=0\land \nabla f(\underline{p_{0}})=-\lambda \nabla g(\underline{p_{0}})$
+Ovvero
+$$\begin{flalign}\nabla L(x,y,\lambda )=(0,0,0)\iff\begin{cases}
+\frac{\partial L}{\partial\lambda}(x,y,\lambda)=0 \\
+\frac{\partial L}{\partial x}(x,y,\lambda)=0 \\
+\frac{\partial L}{\partial y}(x,y,\lambda)=0
+\end{cases}\iff\begin{cases}
+g(x,y)=0 \\
+\nabla f(x,y)=\lambda\nabla g(x,y)
+\end{cases} &&\end{flalign}$$
 
-Un punto $\underline{p_{0}}\in V$ verificante tali condizioni per un opportuno $\lambda_{0}$ si dice punto stazionario di $f$ rispetto a $V$
+Un punto $\underline{p_{0}}\in V$ verificante tali condizioni per un opportuno $\lambda_{0}$ si dice punto stazionario di $f$ rispetto a $V$, pertanto vanno ovviamente studiati anche i punti stazionari di $f$ nella parte interna $\mathring{A}$
 
 <div class="page-break" style="page-break-before: always;"></div>
 

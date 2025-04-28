@@ -35,8 +35,7 @@
               "title": "Differenziali"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,11 +178,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e3843a696cb3770e",
+  "active": "06de5136c320564f",
   "lastOpenFiles": [
+    "Differenziali.md",
     "Integrali.md",
     "pdf/Integrali.pdf",
-    "Differenziali.md",
     "Notazione.md",
     "pdf/Differenziali.pdf",
     "pdf/Notazione.pdf",

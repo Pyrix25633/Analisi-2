@@ -57,3 +57,42 @@ f(x,y),&(x,y)\in A \\
 \end{cases} &&\end{flalign}$$
 Di conseguenza $\tilde{f}\in\mathcal{R}(Q)\implies f\in\mathcal{R}(A)$ e
 $$\begin{flalign}\iint_{A}f=\iint_{Q}\tilde{f}=\mathrm{vol}(T_{\tilde{f}}(Q)) &&\end{flalign}$$
+Osservazione: $\tilde{f}$ non è continua su $\partial A$
+$T_{\tilde{f}}(Q)=P\cup T_{f}(A)$ dove $P$ è una parte limitata del piano $z=0$ e $\mathrm{vol(P)=0}$
+Se non fosse definita $\mathrm{area}(A)$ non sarebbe possibile calcolare l'integrale doppio
+
+# Insieme misurabile
+$A\subset \mathbb{R}^{2}$ limitato, $f:A\to \mathbb{R}$, $f(x,y):=1$ se $(x,y)\in A$
+$A$ si dice misurabile secondo Peano-Jordan se $f\in\mathcal{R}(A)$ e $\mathrm{area}(A)=|A|_{2}=\iint_{A}f$
+Osservazione: $Q=[a,b]\times[c,d]$ è misurabile e $|Q|_{2}=(b-a)\cdot(d-c)$
+
+$A\subset \mathbb{R}^{2}$ limitato
+$A$ è misurabile $\iff \partial A$ è misurabile e $|\partial A|_{2}=0$
+<div class="page-break" style="page-break-before: always;"></div>
+
+$g:[a,b]\to \mathbb{R}$ integrabile $\implies G_{g}:=\{ (x,g(x)):x \in[a,b] \}$ è misurabile e $|G_{g}|_{2}=0$
+
+Corollario: $A\subset \mathbb{R}^{2}$ limitato, $g_{i}:[a_{i},b_{i}]\to \mathbb{R}$ continua (e quindi integrabile)
+$\partial A=\bigcup_{i=1}^{k}G_{g_{i}}=G_{g_{1}}\cup{\dots}\cup G_{g_{k}}\implies A$ è misurabile
+
+# Integrale doppio su un insieme misurabile
+$f:A\to \mathbb{R}$, $f\in \mathrm{C}^{0}(A)$ limitata, $A\subset \mathbb{R}^{2}$ limitato e misurabile
+$\implies f\in\mathcal{R}(A)$
+Osservazione: se $A$ è chiuso e limitato allora se $f$ è continua è sicuramente anche limitata e quindi $f\in\mathcal{R}(A)$
+
+$A\subset \mathbb{R}^{2}$ limitato e misurabile, $A=B\cup C$ misurabili, $|C|_{2}=0$, $f\in\mathcal{R}(A)$
+$$\begin{flalign}\implies \iint_{A}f=\iint_{B}f &&\end{flalign}$$
+Osservazione: $A\subset \mathbb{R}^{2}$ limitato e misurabile, $f\in\mathcal{R}(A)$
+$$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
+
+# Integrale doppio su un dominio semplice e formula di riduzione
+$A\subset \mathbb{R}^{2}$ si dice semplice o normale rispetto all'asse $y$ se
+- $\exists g_{1},g_{2}\in \mathrm{C}^{0}([a,b]):g_{1}\leq g_{2}$ su $[a,b]$
+- $A=\{ (x,y)\in \mathbb{R}^{2}:x \in[a,b]\land g_{1}(x)\leq y\leq g_{2}(x) \}$
+Analogamente rispetto all'asse $x$
+Un dominio semplice è limitato e misurabile
+
+$A\subset \mathbb{R}^{2}$ semplice rispetto a $y$, $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$ e
+$$\begin{flalign}|A|_{2}=\iint_{A}1=\int_{a}^{b}(g_{2}(x)-g_{1}(x))\,dx &&\end{flalign}$$
+$$\begin{flalign}\iint_{A}f=\int_{a}^{b}\int_{g_{1}(x)}^{g_{2}(x)}f(x,y)\,dy\,dx &&\end{flalign}$$
+Analogamente per $x$

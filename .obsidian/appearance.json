@@ -1,5 +1,8 @@
 {
   "accentColor": "",
   "baseFontSize": 18,
-  "theme": "obsidian"
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "callouts"
+  ]
 }

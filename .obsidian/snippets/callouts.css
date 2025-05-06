@@ -33,7 +33,7 @@
     --callout-icon: lucide-search;
 }
 
-.callout[data-callout="corollario"] {
-    --callout-color: 255, 167, 0;
-    --callout-icon: lucide-book-plus;
+.callout[data-callout="note"] {
+    --callout-color: 70, 70, 70;
+    --callout-icon: lucide-pencil;
 }

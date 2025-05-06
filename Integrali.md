@@ -6,20 +6,20 @@
 
 ### Suddivisione
 > [!definizione]
-> Si chiama suddivisione di $[a,b]$ un insieme finito $\{ x_{0},x_{1},\dots,x_{n} \}:a=x_{0}<x_{1}<{\dots}<x_{n}=b$ 
-> Si chiama suddivisione di $A$ l'insieme $\mathcal{D}:=\mathcal{D}_{1}\times\mathcal{D}_{2}=\{ x_{0},\dots,x_{n} \}\times \{ y_{0},\dots,y_{m} \}=\{ (x_{i},y_{j}):i=0,\dots,n\land j=0,\dots,m \}$
+> Si chiama suddivisione di $[a,b]$ un insieme finito $\{ x_{0},x_{1},\dots,x_{m} \}:a=x_{0}<x_{1}<{\dots}<x_{m}=b$ 
+> Si chiama suddivisione di $A$ l'insieme $\mathcal{D}:=\mathcal{D}_{1}\times\mathcal{D}_{2}=\{ x_{0},\dots,x_{m} \}\times \{ y_{0},\dots,y_{n} \}=\{ (x_{i},y_{j}):i=0,\dots,m\land j=0,\dots,n \}$
 > $A$ resta suddiviso in $n\times m$ rettangoli $A_{ij}:=[x_{i-1},x_{i}]\times[y_{j-1},y_{j}]$ di area $\mathrm{area}(A_{ij})=(x_{i}-x_{i-1})\cdot(y_{j}-y_{j-1})$
 
 ### Somma superiore e inferiore
 > [!definizione]
 > $$\begin{flalign}&M_{ij}:=\mathrm{sup}_{A_{ij}}\{ f \}\\
-> &m_{ij}:=\mathrm{inf}_{A}\{ f \}&&\end{flalign}$$
+> &m_{ij}:=\mathrm{inf}_{A_{ij}}\{ f \}&&\end{flalign}$$
 > Si chiamano somma superiore e inferiore
-> $$\begin{flalign}&S(f,\mathcal{D}):=\sum_{i=1}^{n} \sum_{j=1}^{m} M_{ij}\cdot area(A_{ij})\\
-&s(f,\mathcal{D}):=\sum_{i=1}^{n} \sum_{j=1}^{m} m_{ij}\cdot \mathrm{area}(A_{ij})&&\end{flalign}$$
+> $$\begin{flalign}&S(f,\mathcal{D}):=\sum_{i=1}^{m} \sum_{j=1}^{n} M_{ij}\cdot \mathrm{area}(A_{ij})\\
+&s(f,\mathcal{D}):=\sum_{i=1}^{m} \sum_{j=1}^{n} m_{ij}\cdot \mathrm{area}(A_{ij})&&\end{flalign}$$
 > Proprietà:
 > - Se $f\geq0$, $M_{ij}\cdot \mathrm{area}(A_{ij})$ e $m_{ij}\cdot \mathrm{area}(A_{ij})$ rappresentano il volume di un parallelepipedo che approssima il grafico per eccesso e per difetto
-> - $\mathrm{area}(A_{ij})\cdot \mathrm{inf}_{A}\{ f \}\leq s(f,\mathcal{D})\leq S(f,\mathcal{D})\leq \mathrm{area}(A_{ij})\cdot \mathrm{sup}_{A}\{ f \}$
+> - $\mathrm{area}(A_{ij})\cdot \mathrm{inf}_{A_{ij}}\{ f \}\leq s(f,\mathcal{D})\leq S(f,\mathcal{D})\leq \mathrm{area}(A_{ij})\cdot \mathrm{sup}_{A_{ij}}\{ f \}$
 > - $\mathcal{D}',\mathcal{D}''$ suddivisioni qualunque, $s(f,\mathcal{D}')\leq S(f,\mathcal{D}'')$
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -43,7 +43,7 @@ $g\leq f\implies \iint_{A}g\leq \iint_{A}f$
 
 > [!teorema] Teorema della media integrale
 > $f:A\subset \mathbb{R}^{2}\to \mathbb{R}$, $f\in\mathcal{R}(A)$
-> $$\begin{flalign}\mathrm{inf}_{A}\{ f \}\leq \frac{1}{\mathrm{area(A)}}\iint_{A}f=z_{0}\leq \mathrm{sup}_{A}\{ f \} &&\end{flalign}$$
+> $$\begin{flalign}\mathrm{inf}_{A}\{ f \}\leq \frac{1}{\mathrm{area}(A)}\iint_{A}f=z_{0}\leq \mathrm{sup}_{A}\{ f \} &&\end{flalign}$$
 > Inoltre se $f\in \mathrm{C}^{0}(A)\implies \exists \underline{p_{0}}:f(\underline{p_{0}})=z_{0}$
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -85,8 +85,9 @@ f(x,y),&(x,y)\in A \\
 > $A\subset \mathbb{R}^{2}$ limitato
 > $A$ è misurabile $\iff \partial A$ è misurabile e $|\partial A|_{2}=0$
 
-> [!definizione]
-> $g:[a,b]\to \mathbb{R}$ integrabile $\implies G_{g}:=\{ (x,g(x)):x \in[a,b] \}$ è misurabile e $|G_{g}|_{2}=0$
+> [!teorema]
+> $g:[a,b]\to \mathbb{R}$ integrabile
+> $\implies G_{g}:=\{ (x,g(x)):x \in[a,b] \}\subset \mathbb{R}^{2}$ è misurabile e $|G_{g}|_{2}=0$
 
 > [!osservazione]-
 > $A\subset \mathbb{R}^{2}$ limitato, $g_{i}:[a_{i},b_{i}]\to \mathbb{R}$ continua (e quindi integrabile) ($i=1,\dots,k$)
@@ -144,3 +145,117 @@ $$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
 > [!teorema]
 > $D,D^{*}\subset \mathbb{R}^{2}$ aperti, limitati e misurabili, $\psi:D^{*}\to D$ cambiamento di variabili
 > $$\begin{flalign}\iint_{D}f(x,y)\,dx\,dy=\iint_{D^{*}}f(\psi(u,v))\cdot |\det(J_{\psi}(u,v))|\,du\,dv &&\end{flalign}$$
+
+# Integrale triplo su un parallelepipedo
+### Suddivisione
+> [!definizione]
+> $A=[a_{1},b_{1}]\times[a_{2},b_{2}]\times[a_{3},b_{3}]\subset \mathbb{R}^{3}$
+> $\mathcal{D}_{1}:=\{ a_{1}=x_{0}\leq{\dots}\leq x_{i}\leq{\dots}\leq x_{m}=b_{1} \}$ suddivisione di $[a_{1},b_{1}]$
+> $\mathcal{D}_{2}:=\{ a_{2}=y_{0}\leq{\dots}\leq y_{j}\leq{\dots}\leq y_{n}=b_{2} \}$ suddivisione di $[a_{2},b_{2}]$
+> $\mathcal{D}_{3}:=\{ a_{3}=z_{0}\leq{\dots}\leq z_{k}\leq{\dots}\leq z_{p}=b_{3} \}$ suddivisione di $[a_{3},b_{3}]$
+> $\mathcal{D}=\mathcal{D}_{1}\times\mathcal{D}_{2}\times\mathcal{D}_{3}$ si chiama suddivisione di $A$
+> $A$ risulta diviso in $m\times n\times p$ parallelepipedi $A_{ijk}=[x_{i-1},x_{i}]\times[y_{j-1},y_{j}]\times[z_{k-1},z_{k}]$ di volume $\mathrm{vol}(A_{ijk})=|A_{ijk}|_{3}=(x_{i}-x_{i-1})\cdot(y_{j}-y_{j-1})\cdot(z_{k}-z_{k-1})$
+> ($i=1,\dots,m$, $j=1,\dots,n$, $k=1,\dots,p$)
+
+### Somma superiore e inferiore
+> [!definizione]
+> $$\begin{flalign}&M_{ijk}:=\mathrm{sup}_{A_{ijk}}\{ f \}\\
+> &m_{ijk}:=\mathrm{inf}_{A_{ijk}}\{ f \}&&\end{flalign}$$
+> Si chiamano somma superiore e inferiore
+> $$\begin{flalign}&S(f,\mathcal{D}):=\sum_{i=1}^{m} \sum_{j=1}^{n}\sum_{k=1}^{p} M_{ijk}\cdot \mathrm{vol}(A_{ijk})\\
+&s(f,\mathcal{D}):=\sum_{i=1}^{m} \sum_{j=1}^{n}\sum_{k=1}^{p} m_{ijk}\cdot \mathrm{vol}(A_{ijk})&&\end{flalign}$$
+
+# Funzione integrabile secondo Riemann
+> [!definizione]
+> Se $\mathrm{sup}\{ s(f,\mathcal{D}) \}=\mathrm{inf}\{ S(f,\mathcal{D}) \}=L\in \mathbb{R}\implies f\in\mathcal{R}(A)$ e si denota
+> $$\begin{flalign}L=\iiint_{A}f &&\end{flalign}$$
+
+> [!teorema] Teoremi
+> ### Esistenza dell'integrale
+> $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$
+> 
+> ### Linearità
+> $\iiint_{A}(\alpha f+\beta g)=\alpha \iiint_{A}f+\beta \iiint_{A}g$
+> 
+> ### Monotonia
+$g\leq f\implies \iiint_{A}g\leq \iiint_{A}f$
+> 
+> ### Valore assoluto
+> $|\iiint_{A}f|\leq \iiint_{A} |f|$
+
+> [!teorema] Teorema della media integrale
+> $f:A\subset \mathbb{R}^{3}\to \mathbb{R}$, $f\in\mathcal{R}(A)$
+> $$\begin{flalign}\mathrm{inf}_{A}\{ f \}\leq \frac{1}{\mathrm{vol}(A)}\iint_{A}f=w_{0}\leq \mathrm{sup}_{A}\{ f \} &&\end{flalign}$$
+> Inoltre se $f\in \mathrm{C}^{0}(A)\implies \exists \underline{p_{0}}:f(\underline{p_{0}})=w_{0}$
+
+# Formule di riduzione sui rettangoli
+> [!formule]
+> $A=[a_{1},b_{1}]\times[a_{2},b_{2}]\times[a_{3},b_{3}]$, $f\in \mathrm{C}^{0}(A)$
+> ### Riduzione per fili
+> $\forall z\in[a_{3},b_{3}]\;\;(x,y)\in[a_{1},b_{1}]\times[a_{2},b_{2}]\to \int_{a_{3}}^{b_{3}}f(x,y,z)\,dz$ è integrabile su $[a_{1},b_{1}]\times[a_{2},b_{2}]$ e
+> $$\begin{flalign}\iiint_{A}f=\iint_{[a_{1},b_{1}]\times[a_{2},b_{2}]}\left( \int_{a_{3}}^{b_{3}}f(x,y,z)\,dz \right)\,dx\,dy &&\end{flalign}$$
+> Analogamente per $x$ e $y$
+> 
+> ### Riduzione per strati
+> $\forall(x,y)\in[a_{1},b_{1}]\times[a_{2},b_{2}]\;\;z\in[a_{3},b_{3}]\to \iint_{[a_{1},b_{1}]\times[a_{2},b_{2}]}f(x,y,z)\,dx\,dz$ è integrabile su $[a_{3},b_{3}]$ e
+> $$\begin{flalign}\iiint_{A}f=\int_{a_{3}}^{b_{3}}\left(\iint_{[a_{1},b_{1}]\times[a_{2},b_{2}]}f(x,y,z)\,dx\,dy\right)\,dz &&\end{flalign}$$
+> Analogamente per $x$ e $y$
+
+# Integrale triplo su un insieme generale
+> [!definizione]
+> Se $A\subset \mathbb{R}^{3}$ è limitato ma non parallelepipedo è possibile definire una nuova funzione
+> $A\subset Q=[a_{1},b_{1}]\times[a_{2},b_{2}]\times[a_{3},b_{3}]$, $\tilde{f}:Q\to \mathbb{R}$
+> $$\begin{flalign}\tilde{f}(x,y,z)=\begin{cases}
+f(x,y,z),&(x,y,z)\in A \\
+0,&(x,y,z)\in Q\setminus A
+\end{cases} &&\end{flalign}$$
+> Di conseguenza $\tilde{f}\in\mathcal{R}(Q)\implies f\in\mathcal{R}(A)$ e
+> $$\begin{flalign}\iiint_{A}f=\iiint_{Q}\tilde{f} &&\end{flalign}$$
+
+# Insieme misurabile
+> [!definizione]
+> $A\subset \mathbb{R}^{3}$ limitato, $f:A\to \mathbb{R}$, $f(x,y,z):=1$ se $(x,y,z)\in A$
+> $A$ si dice misurabile secondo Peano-Jordan se $f\in\mathcal{R}(A)$ e $\mathrm{vol}(A)=|A|_{3}=\iiint_{A}f$
+
+> [!teorema]
+> $A\subset \mathbb{R}^{3}$ limitato
+> $A$ è misurabile $\iff \partial A$ è misurabile e $|\partial A|_{3}=0$
+
+> [!teorema]
+> $E\subset \mathbb{R}^{2}$ limitato e misurabile, $g\in\mathcal{R}(E)$
+> $\implies G_{g}:=\{ (x,y,g(x,y)):(x,y) \in E \}\subset \mathbb{R}^{3}$ è misurabile e $|G_{g}|_{3}=0$
+
+# Integrale triplo su un insieme misurabile
+> [!teorema]
+> $f:A\to \mathbb{R}$, $f\in \mathrm{C}^{0}(A)$ limitata, $A\subset \mathbb{R}^{3}$ limitato e misurabile
+> $\implies f\in\mathcal{R}(A)$
+
+> [!teorema]
+> $A\subset \mathbb{R}^{3}$ limitato e misurabile, $A=B\cup C$ misurabili, $|C|_{}=0$, $f\in\mathcal{R}(A)$
+> $$\begin{flalign}\implies \iiint_{A}f=\iiint_{B}f &&\end{flalign}$$
+
+# Integrale triplo su un dominio semplice e formula di riduzione
+> [!definizione]
+> $A\subset \mathbb{R}^{3}$ si dice semplice o normale rispetto all'asse $z$ se
+> - $\exists g_{1},g_{2}\in \mathrm{C}^{0}(E):g_{1}\leq g_{2}$ su $E\in \mathbb{R}^{2}$
+> - $A=\{ (x,y,z)\in \mathbb{R}^{3}:(x,y)\in E\land g_{1}(x,y)\leq z\leq g_{2}(x,y) \}$
+> 
+> Analogamente rispetto agli assi $x$ e $y$
+> Un dominio semplice è limitato e misurabile
+
+> [!formule]
+> $A\subset \mathbb{R}^{3}$ semplice rispetto a $z$, $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$ e
+> $$\begin{flalign}\iiint_{A}f=\iint_{E}\left(\int_{g_{1}(x,y)}^{g_{2}(x,y)}f(x,y,z)\,dz\right)\,dy\,dx &&\end{flalign}$$
+> Analogamente per $x$ e $y$
+
+> [!teorema]
+> $A\subset \mathbb{R}^{3}$ limitato e misurabile, $A=A\cap(\mathbb{R}\times \mathbb{R}\times[a,b])$
+> $A_{z}:=\{ (x,y)\in \mathbb{R}^{2}:(x,y,z)\in A \}$ misurabile, $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$ e
+> $$\begin{flalign}\iiint_{A}f=\int_{a}^{b}\left(\iint_{A_{z}}f(x,y,z)\,dx\,dy\right)\,dz &&\end{flalign}$$
+
+# Applicazione della riduzione per strati al volume di un solido per rotazione
+> [!approfondimento]-
+> $A=\{ (x,y,z)\in \mathbb{R}^{3}:z\in[a,b]\land x^{2}+y^{2}\leq g(z)^{2} \}$, $g\in \mathrm{C}^{0}([a,b])$, $g(z)\geq0\;\;\forall z\in[a,b]$
+> $A$ può essere visto come la rotazione di $F=\{ (y,z)\in \mathbb{R}^{2}:z\in[a,b]\land0\leq y\leq g(z) \}$ (o analogamente per $x$)
+> $A_{z}=\{ (x,y)\in \mathbb{R}^{2}:x^{2}+y^{2}\leq g(z)^{2} \}$ è uno strato, più nello specifico un cerchio di area $\mathrm{area}(A_{z})=|A_{z}|_{2}=\pi\cdot g(z)^{2}$ e
+> $$\begin{flalign}|A|_{3}&=\iiint_{A}1=\int_{a}^{b}\left(\iint_{A_{z}}1\,dx\,dy\right)\,dz=\int_{a}^{b}\mathrm{area}(A_{z})\,dz=\pi \int_{a}^{b}g(z)^{2}\,dz &&\end{flalign}$$

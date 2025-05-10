@@ -146,6 +146,16 @@ $$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
 > $D,D^{*}\subset \mathbb{R}^{2}$ aperti, limitati e misurabili, $\psi:D^{*}\to D$ cambiamento di variabili
 > $$\begin{flalign}\iint_{D}f(x,y)\,dx\,dy=\iint_{D^{*}}f(\psi(u,v))\cdot |\det(J_{\psi}(u,v))|\,du\,dv &&\end{flalign}$$
 
+> [!approfondimento]- Rotazione del sistema di riferimento
+> In alcuni casi potrebbe essere utile ruotare il sistema di riferimento per rendere semplice un dominio, come nel caso di un rettangolo ruotato che andrebbe altrimenti diviso in $3$ o in $2$ se quadrato
+> Quindi scegliamo due nuovi assi $u$ e $v$ in modo che
+> $y=mx+u$ e $y=-\frac{x}{m}+v$
+> Ovvero $u=y-mx$ e $u=y+\frac{x}{m}$
+> Con alcuni calcoli si ottiene
+> $$\begin{flalign}\psi(u,v)=\left( \frac{m^{2}v+u}{1+m^{2}},m \frac{v-u}{1+m^{2}} \right) &&\end{flalign}$$
+> Il fattore di trasformazione è il valore assoluto del determinante
+> $$\begin{flalign}\det(J_{\psi}(u,v))=\frac{m}{1+m^{2}} &&\end{flalign}$$
+
 # Integrale triplo su un parallelepipedo
 ### Suddivisione
 > [!definizione]
@@ -191,15 +201,33 @@ $g\leq f\implies \iiint_{A}g\leq \iiint_{A}f$
 # Formule di riduzione sui rettangoli
 > [!formule]
 > $A=[a_{1},b_{1}]\times[a_{2},b_{2}]\times[a_{3},b_{3}]$, $f\in \mathrm{C}^{0}(A)$
+> 
+> > [!note]-
+>> **Cosa sto facendo quando calcolo un integrale triplo?**
+>> Riportiamoci in due variabili, l'idea è di calcolare una somma di aree per ottenere un volume
+>  > In questo caso io quando calcolo l'integrale sto integrando sempre per fili perché sia se integro per $x$ o per $y$ io sto calcolando nel primo integrale un'area rispetto ad un filo per $x$ o $y$ e poi attraverso il secondo calcolo le aree rispetto ad un filo per l'altra variabile ed in questo modo ottengo il volume sotteso grafico della funzione
+> > ---
+> > In tre variabili invece l'idea è che calcolo una somma di volumi rispetto ad altezze diverse, perciò in questo caso io posso scegliere se integrare prima per il filo e poi per la superficie e viceversa, ovvero integro 3 volte per fili. 
+> 
 > ### Riduzione per fili
 > $\forall z\in[a_{3},b_{3}]\;\;(x,y)\in[a_{1},b_{1}]\times[a_{2},b_{2}]\to \int_{a_{3}}^{b_{3}}f(x,y,z)\,dz$ è integrabile su $[a_{1},b_{1}]\times[a_{2},b_{2}]$ e
 > $$\begin{flalign}\iiint_{A}f=\iint_{[a_{1},b_{1}]\times[a_{2},b_{2}]}\left( \int_{a_{3}}^{b_{3}}f(x,y,z)\,dz \right)\,dx\,dy &&\end{flalign}$$
 > Analogamente per $x$ e $y$
 > 
+> > [!note]-
+> > Effettuando prima l'integrazione per il filo noi stiamo calcolando un'area rispetto ad un filo di una delle variabili ($x,y,z$) e poi quest'area la andiamo a calcolare rispetto ad una superficie (le altre 2 variabili rimanenti), ovvero sommiamo l'area per ogni punto della superficie, se pensiamo alla superficie come un'insieme di fili noi stiamo calcolando un numero di volumi pari alla lunghezza del terzo filo
+> > La somma di questi volumi è il risultato dell'integrale
+>
 > ### Riduzione per strati
 > $\forall(x,y)\in[a_{1},b_{1}]\times[a_{2},b_{2}]\;\;z\in[a_{3},b_{3}]\to \iint_{[a_{1},b_{1}]\times[a_{2},b_{2}]}f(x,y,z)\,dx\,dz$ è integrabile su $[a_{3},b_{3}]$ e
 > $$\begin{flalign}\iiint_{A}f=\int_{a_{3}}^{b_{3}}\left(\iint_{[a_{1},b_{1}]\times[a_{2},b_{2}]}f(x,y,z)\,dx\,dy\right)\,dz &&\end{flalign}$$
 > Analogamente per $x$ e $y$
+> 
+>>[!note]-
+> > Effettuando prima l'integrazione per la superficie noi stiamo calcolando direttamente un volume, ovvero abbiamo calcolato un integrale doppio, un integrale calcolato per fili 2 volte
+> > Poi come ultimo integrale abbiamo un'altra integrazione per fili del volume ottenuto rispetto a 2 variabili ed infine come in precedenza andiamo a sommare il volume per ogni punto del filo ovvero rispetto all'ultima variabile
+> > Come prima il risultato è una somma di volumi per ogni punto del filo che corrisponde al risultato dell'integrale triplo
+>
 
 # Integrale triplo su un insieme generale
 > [!definizione]
@@ -253,8 +281,7 @@ f(x,y,z),&(x,y,z)\in A \\
 > $A_{z}:=\{ (x,y)\in \mathbb{R}^{2}:(x,y,z)\in A \}$ misurabile, $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$ e
 > $$\begin{flalign}\iiint_{A}f=\int_{a}^{b}\left(\iint_{A_{z}}f(x,y,z)\,dx\,dy\right)\,dz &&\end{flalign}$$
 
-# Applicazione della riduzione per strati al volume di un solido per rotazione
-> [!approfondimento]-
+> [!approfondimento]- Applicazione della riduzione per strati al volume di un solido per rotazione
 > $A=\{ (x,y,z)\in \mathbb{R}^{3}:z\in[a,b]\land x^{2}+y^{2}\leq g(z)^{2} \}$, $g\in \mathrm{C}^{0}([a,b])$, $g(z)\geq0\;\;\forall z\in[a,b]$
 > $A$ può essere visto come la rotazione di $F=\{ (y,z)\in \mathbb{R}^{2}:z\in[a,b]\land0\leq y\leq g(z) \}$ (o analogamente per $x$)
 > $A_{z}=\{ (x,y)\in \mathbb{R}^{2}:x^{2}+y^{2}\leq g(z)^{2} \}$ è uno strato, più nello specifico un cerchio di area $\mathrm{area}(A_{z})=|A_{z}|_{2}=\pi\cdot g(z)^{2}$ e

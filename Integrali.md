@@ -152,9 +152,9 @@ $$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
 > $y=mx+u$ e $y=-\frac{x}{m}+v$
 > Ovvero $u=y-mx$ e $u=y+\frac{x}{m}$
 > Con alcuni calcoli si ottiene
-> $$\begin{flalign}\psi(u,v)=\left( \frac{m^{2}v+u}{1+m^{2}},m \frac{v-u}{1+m^{2}} \right) &&\end{flalign}$$
+> $$\begin{flalign}\psi(u,v)=\left( m \frac{v-u}{1+m^{2}},\frac{m^{2}v+u}{1+m^{2}} \right) &&\end{flalign}$$
 > Il fattore di trasformazione è il valore assoluto del determinante
-> $$\begin{flalign}\det(J_{\psi}(u,v))=\frac{m}{1+m^{2}} &&\end{flalign}$$
+> $$\begin{flalign}\det(J_{\psi}(u,v))=-\frac{m}{1+m^{2}} &&\end{flalign}$$
 
 # Integrale triplo su un parallelepipedo
 ### Suddivisione

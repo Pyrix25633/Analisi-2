@@ -48,3 +48,32 @@
 
 > [!osservazione]-
 > Se $\varphi(\tau)>0\;\;\forall \tau \in \tilde{I}$ allora $\gamma$ e $\tilde{\gamma}$ hanno lo stesso verso, altrimenti se $\varphi(\tau)<0\;\;\forall \tau \in \tilde{I}$ hanno verso opposto
+
+# Lunghezza di una curva
+> [!definizione]
+> $\gamma:[a,b]\to \mathbb{R}^{n}$ curva, $\mathcal{D}=\{ a=t_{0}<{\dots}<t_{k}=b \}$ suddivisione di $[a,b]$ induce una suddivisione del sostegno di $\gamma$ in $k+1$ punti definiti da $\gamma(t_{0}),\dots,\gamma(t_{k})$ e quindi $k$ segmenti $[\gamma(t_{i-1}),\gamma(t_{i})]:=\{ s\cdot \gamma(t_{i})+(1-s)\cdot \gamma(t_{i-1}):0\leq s\leq1 \}$
+> La lunghezza della spezzata definita da $\bigcup_{i=1}^{k}[\gamma(t_{i-1}),\gamma(t_{i})]$ è data da $L(\gamma,\mathcal{D}):=\sum_{i=1}^{k}||\gamma(t_{i})-\gamma(t_{i-1})||\in[0,+\infty)$
+> $L(\gamma):=\mathrm{sup}_{\mathcal{D}}\{ L(\gamma,\mathcal{D}) \}\in[0,+\infty]$
+> Se $L(\gamma)<+\infty\implies \gamma$ si dice rettificabile e $L(\gamma)$ è detta lunghezza di $\gamma$
+
+> [!teorema]
+> $\gamma:[a,b]\to \mathbb{R}^{n}$ curva, $\gamma \in \mathrm{C}^{1}([a,b])$
+> $\implies \gamma$ è rettificabile e
+> $$\begin{flalign}L(\gamma)=\int_{a}^{b}||\gamma'(t)||\,dt=\int_{a}^{b}\sqrt{\gamma_{1}'^{2}(t)+{\dots}+\gamma_{n}'^{2}(t)}\,dt &&\end{flalign}$$
+
+> [!osservazione]-
+> $\gamma:[a.b]\to \mathbb{R}^{2}$ curva piana cartesiana, $\gamma,f \in \mathrm{C}^{1}([a,b])$, $\gamma(t):=(t,f(t))$
+> $\implies \gamma$ è rettificabile e $L(\gamma)=\int_{a}^{b}\sqrt{1+f'^{2}(t)}\,dt$
+
+# Indipendenza della lunghezza dalla parametrizzazione
+> [!teorema]
+> $\gamma:[a,b]\to \mathbb{R}^{n},\tilde{\gamma}:[\alpha,\beta]\to \mathbb{R}^{n}$ curve di classe $\mathrm{C}^{1}$ equivalenti
+> $\implies L(\gamma)=L(\tilde{\gamma})$
+> > [!dimostrazione]-
+> > $\varphi:[\alpha,\beta]\to[a,b]$ cambiamento di parametrizzazione, $\varphi(\tau)>0\;\;\forall \tau \in[\alpha,\beta]$
+> > $$\begin{flalign}L(\tilde{\gamma})&=\int_{\alpha}^{\beta}||\tilde{\gamma}'(\tau)||\,d\tau=\int_{\alpha}^{\beta}||\gamma'(\varphi(\tau))\cdot \varphi'(\tau)||\,d\tau=\int_{\alpha}^{\beta}||\gamma'(\varphi(\tau))||\cdot\varphi'(\tau)\,d\tau\\
+> > &=\int_{\varphi(\alpha)}^{\varphi(\beta)}||\gamma'(t)||\,dt=\int_{a}^{b}||\gamma'(t)||\,dt=L(\gamma) &&\end{flalign}$$
+
+> [!osservazione]-
+> Una curva $\mathrm{C}^{1}$ a tratti $\gamma=\sum_{i=1}^{k}\gamma_{i}$, $\gamma_{i}:[t_{i-1},t_{i}]\to \mathbb{R}^{n}$ è rettificabile e
+> $$\begin{flalign}L(\gamma)=\sum_{i=1}^{k}\int_{t_{i-1}}^{t_{i}}||\gamma_{i}'(t)||\,dt &&\end{flalign}$$

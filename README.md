@@ -7,7 +7,7 @@
 - [Curve](Curve.md)
 
 ### PDFs
-- [Notazione](Notazione.pdf)
-- [Differenziali](Differenziali.pdf)
-- [Integrali](Integrali.pdf)
-- [Curve](Curve.pdf)
+- [Notazione](pdf/Notazione.pdf)
+- [Differenziali](pdf/Differenziali.pdf)
+- [Integrali](pdf/Integrali.pdf)
+- [Curve](pdf/Curve.pdf)

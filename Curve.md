@@ -36,7 +36,7 @@
 > Se $\gamma'(t_{0})\neq\underline{0}$ si chiama retta tangente a $\gamma$ in $\underline{x_{0}}=\gamma(t_{0})$ la retta $\underline{x}=\gamma(t_{0})+\gamma'(t_{0})(t-t_{0})$
 > 
 > $\gamma:I\to \mathbb{R}^{n}$ si dice di classe $\mathrm{C}^{m}$ se $\gamma_{i}\in \mathrm{C}^{m}(I)\;\;\forall i\in \{ 1,\dots,n \}$
-> $\gamma$ si dice regolare se $\gamma \in \mathrm{C}^{1}(I)$ e $\gamma'(t)\neq \underline{0}\;\;\forall t \in I$
+> $\gamma$ si dice **regolare** se $\gamma \in \mathrm{C}^{1}(I)$ e $\gamma'(t)\neq \underline{0}\;\;\forall t \in I$
 > Si chiama versore o direzione tangente a $\gamma$ il campo vettore
 > $$\begin{flalign}T_{\gamma}(t):=\frac{\gamma'(t)}{||\gamma'(t)||} &&\end{flalign}$$
 > $\gamma:[a,b]\to \mathbb{R}^{n}$ si dice $\mathrm{C}^{1}$ a tratti se $\exists \{ a=t_{0}<{\dots}<t_{k}=b \}$ suddivisione di $[a,b]$ tale che $\gamma_{j}=\gamma|_{[t_{j-1},t_{j}]}:[t_{j-1},t_{j}]\to \mathbb{R}^{n}$ è di classe $\mathrm{C}^{1}$ e $\gamma=\bigcup_{j=1}^{k}\gamma_{j}$

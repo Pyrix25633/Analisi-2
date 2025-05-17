@@ -162,8 +162,8 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 \frac{\partial^{2}f}{\partial x^{2}}(\underline{p}) & \frac{\partial^{2}f}{\partial y\partial x}(\underline{p}) \\
 \frac{\partial^{2}f}{\partial x\partial y}(\underline{p}) & \frac{\partial^{2}f}{\partial y^{2}}(\underline{p})
 \end{bmatrix}=\begin{bmatrix}
-\nabla \left( \frac{\partial f}{\partial x} \right) \\
-\nabla\left( \frac{\partial f}{\partial y} \right)
+\nabla \left( \frac{\partial f}{\partial x} \right)(\underline{p}) \\
+\nabla\left( \frac{\partial f}{\partial y} \right)(\underline{p})
 \end{bmatrix} &&\end{flalign}$$
 
 > [!osservazione]-

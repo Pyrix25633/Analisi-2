@@ -116,3 +116,59 @@
 > Si definisce integrale curvilineo di seconda specie di $\omega$ lungo $\gamma$
 > $$\begin{flalign}\int_{\gamma}\omega:=\int_{a}^{b}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt=\int_{a}^{b}\sum_{i=1}^{n}F_{i}(\gamma(t))\cdot\gamma_{i}'(t)\,dt &&\end{flalign}$$
 > Se $\gamma$ è chiusa si indica anche con $\oint_{\gamma}\omega$
+
+> [!teorema]
+> $E\subset \mathbb{R}^{n}$, $\gamma:[a,b]\to E,\tilde{\gamma}:[\alpha,\beta]\to E$ curve di classe $\mathrm{C}^{1}$ equivalenti, $\tilde{\gamma}=\gamma \circ\varphi$
+> - $\varphi(\tau)>0\;\;\forall \tau \in[\alpha,\beta]\implies \int_{\gamma}\omega=\int_{\tilde{\gamma}}\omega$
+> - $\varphi(\tau)<0\;\;\forall \tau \in[\alpha,\beta]\implies \int_{\gamma}\omega=-\int_{\tilde{\gamma}}\omega$
+> 
+> > [!dimostrazione]-
+> > $\varphi:[\alpha,\beta]\to[a,b]$ cambiamento di parametrizzazione, $\tilde{\gamma}'=\gamma'(\varphi(\tau))\cdot \varphi'(\tau)$
+> > $$\begin{flalign}{\dots}&=\int_{\alpha}^{\beta}\langle F(\tilde{\gamma}(\tau)),\tilde{\gamma}'(\tau)\rangle\,d\tau=\int_{\alpha}^{\beta}\langle F(\gamma(\varphi(\tau))),\gamma'(\varphi(\tau))\cdot \varphi(\tau)\rangle\,d\tau\\
+> > &=\int_{\alpha}^{\beta}\langle F(\gamma(\varphi(\tau))),\gamma'(\varphi(\tau))\rangle \cdot \varphi'(\tau)\,d\tau=\int_{\varphi(\alpha)}^{\varphi(\beta)}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt={\dots} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
+
+> [!osservazione]-
+> $\gamma:[a,b]\to E\subset \mathbb{R}^{n}$ regolare e semplice, $\omega=\langle F, d\underline{x}\rangle$ forma differenziale si classe $\mathrm{C}^{0}(E)$
+> $\implies \int_{\gamma}\omega=\int_{\gamma}\langle F,T_{\gamma}\rangle\,ds$
+
+# Forme differenziali esatte
+> [!definizione]
+> $E\subset \mathbb{R}^{n}$ aperto, $U\in \mathrm{C}^{1}(E)$, $\omega=\langle F,d\underline{x}\rangle$, $F:E\to \mathbb{R}^{n}$
+> $dU=\langle \nabla U,d\underline{x}\rangle=\frac{\partial U}{\partial x_{1}}dx_{1}+{\dots}+\frac{\partial U}{\partial x_{n}}dx_{n}$ viene chiamata forma differenziale di $U$
+> $\omega$ si dice esatta se $\exists U:\nabla U(\underline{x})=F(\underline{x})\;\;\forall \underline{x}\in E$, equivalentemente $dU=\omega$ e $U$ è detta **funzione potenziale** di $\omega$ (o anche di $F$) in $E$
+
+> [!teorema]
+> $E\subset \mathbb{R}^{n}$ aperto, $\omega$ forma differenziale continua ed esatta su $E$, $\gamma:[a,b]\to E$ $\mathrm{C}^{1}$ a tratti, $U$ qualunque potenziale di $\omega$
+> $\implies \int_{\gamma}\omega=U(\gamma(b))-U(\gamma(a))$
+> > [!dimostrazione]-
+> > Per ipotesi $\exists U$ potenziale di $\omega$ su $E$ tale che $\nabla U(\underline{x})=F(\underline{x})$
+> > $\frac{d}{dt}(U(\gamma(t)))=\langle \nabla U(\gamma(t)),\gamma'(t)\rangle=\langle F(\gamma(t)),\gamma'(t)\rangle\;\;\forall t\in[a,b]$
+> > $$\begin{flalign}{\dots}=\int_{a}^{b}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt=\int_{a}^{b} \frac{d}{dt}(U(\gamma(t)))\,dt=[U(\gamma(t))]_{a}^{b}={\dots} &&\end{flalign}$$
+
+> [!osservazione]-
+> $\gamma$ curva chiusa $\implies \oint_{\gamma}\omega=0$
+
+# Forme differenziali chiuse
+> [!definizione]
+> $E\subset \mathbb{R}^{n}$ aperto, $\omega=\langle F,d\underline{x}\rangle$, $F:E\to \mathbb{R}^{n}$, $F(\underline{x})=(F_{1}(\underline{x}),\dots,F_{n}(\underline{x}))$, $F_{i}\in \mathrm{C}^{1}(E)$ ($i=1,\dots,n$)
+> $\omega$ si dice chiusa in $E$ se
+> $$\begin{flalign} \frac{\partial F_{i}}{\partial x_{j}}(\underline{x})=\frac{\partial F_{j}}{\partial x_{i}}(\underline{x})\;\;\forall \underline{x}\in E,\;i,j\in \{ 1,\dots,n \} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
+
+> [!teorema]
+> $\omega \in \mathrm{C}^{1}(E)$
+> $\omega$ esatta su $E\implies \omega$ chiusa su $E$
+> > [!dimostrazione]-
+> > Per ipotesi $\exists U$ potenziale e $\frac{\partial U}{\partial x_{i}}=F_{i}(\underline{x})$ ($i=1,\dots,n$)
+> > Essendo $U\in \mathrm{C}^{2}(E)$
+> > $$\begin{flalign}{\dots}=\frac{\partial^{2}U}{\partial x_{j}x_{i}}(\underline{x})=\frac{\partial^{2}U}{\partial x_{i}x_{j}}(\underline{x})={\dots} &&\end{flalign}$$
+
+> [!osservazione]-
+> $\omega$ non chiusa in $E\implies$ $\omega$ non esatta in $E$
+
+> [!teorema]
+> $E\subset \mathbb{R}^{n}$ aperto e convesso, ovvero
+> $[\underline{p},\underline{q}]:=\{ t\underline{p}+(1-t)\underline{q}:0\leq t\leq_{1} \}\subset E\;\;\forall\underline{p},\underline{q}\in E$
+> $\omega \in \mathrm{C}^{1}(E)$
+> $\omega$ esatta in $E\iff \omega$ chiusa in $E$

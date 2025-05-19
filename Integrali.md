@@ -155,6 +155,7 @@ $$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
 > $$\begin{flalign}\psi(u,v)=\left( m \frac{v-u}{1+m^{2}},\frac{m^{2}v+u}{1+m^{2}} \right) &&\end{flalign}$$
 > Il fattore di trasformazione è il valore assoluto del determinante
 > $$\begin{flalign}\det(J_{\psi}(u,v))=-\frac{m}{1+m^{2}} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Integrale triplo su un parallelepipedo
 ### Suddivisione
@@ -179,6 +180,7 @@ $$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
 > [!definizione]
 > Se $\mathrm{sup}\{ s(f,\mathcal{D}) \}=\mathrm{inf}\{ S(f,\mathcal{D}) \}=L\in \mathbb{R}\implies f\in\mathcal{R}(A)$ e si denota
 > $$\begin{flalign}L=\iiint_{A}f &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!teorema] Teoremi
 > ### Esistenza dell'integrale
@@ -206,6 +208,8 @@ $g\leq f\implies \iiint_{A}g\leq \iiint_{A}f$
 >> **Cosa sto facendo quando calcolo un integrale triplo?**
 >> Riportiamoci in due variabili, l'idea è di calcolare una somma di aree per ottenere un volume
 >  > In questo caso io quando calcolo l'integrale sto integrando sempre per fili perché sia se integro per $x$ o per $y$ io sto calcolando nel primo integrale un'area rispetto ad un filo per $x$ o $y$ e poi attraverso il secondo calcolo le aree rispetto ad un filo per l'altra variabile ed in questo modo ottengo il volume sotteso grafico della funzione
+>  > <div class="page-break" style="page-break-before: always;"></div>
+> > 
 > > ---
 > > In tre variabili invece l'idea è che calcolo una somma di volumi rispetto ad altezze diverse, perciò in questo caso io posso scegliere se integrare prima per il filo e poi per la superficie e viceversa, ovvero integro 3 volte per fili. 
 > 
@@ -228,6 +232,7 @@ $g\leq f\implies \iiint_{A}g\leq \iiint_{A}f$
 > > Poi come ultimo integrale abbiamo un'altra integrazione per fili del volume ottenuto rispetto a 2 variabili ed infine come in precedenza andiamo a sommare il volume per ogni punto del filo ovvero rispetto all'ultima variabile
 > > Come prima il risultato è una somma di volumi per ogni punto del filo che corrisponde al risultato dell'integrale triplo
 >
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Integrale triplo su un insieme generale
 > [!definizione]
@@ -261,6 +266,7 @@ f(x,y,z),&(x,y,z)\in A \\
 > [!teorema]
 > $A\subset \mathbb{R}^{3}$ limitato e misurabile, $A=B\cup C$ misurabili, $|C|_{}=0$, $f\in\mathcal{R}(A)$
 > $$\begin{flalign}\implies \iiint_{A}f=\iiint_{B}f &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Integrale triplo su un dominio semplice e formula di riduzione
 > [!definizione]

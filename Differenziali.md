@@ -170,7 +170,7 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 > $H_{f}(\underline{p})$ è simmetrica
 
 > [!teorema]
-> $T_{2}(\underline{p})=f(\underline{p_{0}})+\nabla f(\underline{p})(\underline{p} -\underline{p_{0}})+\frac{1}{2}H_{f}(\underline{p})(\underline{p} -\underline{p_{0}})\cdot(\underline{p} -\underline{p_{0}})$
+> $T_{2}(\underline{p})=f(\underline{p_{0}})+\langle\nabla f(\underline{p}),(\underline{p} -\underline{p_{0}})\rangle+\langle\frac{1}{2}H_{f}(\underline{p})\cdot(\underline{p} -\underline{p_{0}})^{T},(\underline{p} -\underline{p_{0}})\rangle$
 > > [!dimostrazione]-
 > > $\underline{p} \in \mathrm{B}(\underline{p_{0}},r)$, $\hat{v}:=\frac{\underline{p} -\underline{p_{0}}}{||\underline{p} -\underline{p_{0}}||}=(v_{1},v_{2})$, $F(t):=f(\underline{p_{0}}+t\hat{v})\;\;t\in(-r,r)$
 > > Poiché $g(t)=\underline{p_{0}}+t\hat{v}\in \mathrm{C}^{2}((-r,r))$ anche $F(t)=f(g(t))\in \mathrm{C}^{2}((-r,r))$
@@ -178,8 +178,8 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 > > $F(t)=F(0)+F'(0)\cdot t+\frac{1}{2}F''(0)\cdot t^{2}+o(t^{2})$
 > > $F'(t)=\nabla f(\underline{p}+t\hat{v})\cdot \hat{v}$
 > > $$\begin{flalign}F''(t)=\frac{\partial^{2}f}{\partial x^{2}}(\underline{p_{0}}+t\hat{v})\cdot v_{1}^{2}+2 \frac{\partial^{2} f}{\partial y\partial x}(\underline{p_{0}}+t\hat{v})\cdot v_{1}\cdot v_{2}+\frac{\partial^{2}f}{\partial y^{2}}(\underline{p_{0}}+t\hat{v})\cdot v_{2}^{2} &&\end{flalign}$$
-> > $F(0)=f(\underline{p_{0}})$, $F'(0)=\nabla f(\underline{p_{0}})\cdot \hat{v}$, $F''(0)=H_{f}(\underline{p_{0}})\hat{v}\cdot \hat{v}$
-> > $F(t)=f(\underline{p_{0}})+(\nabla f(\underline{p_{0}})\cdot \hat{v})t+\frac{1}{2}(H_{f}(\underline{p_{0}})\hat{v}\cdot \hat{v})t^{2}+o(t^{2})$
+> > $F(0)=f(\underline{p_{0}})$, $F'(0)=\langle\nabla f(\underline{p_{0}}), \hat{v}\rangle$, $F''(0)=\langle H_{f}(\underline{p_{0}})\cdot\hat{v}^{T}, \hat{v}\rangle$
+> > $F(t)=f(\underline{p_{0}})+\langle\nabla f(\underline{p_{0}}), \hat{v}\rangle t+\frac{1}{2}\langle H_{f}(\underline{p_{0}})\cdot\hat{v}^{T}, \hat{v}\rangle t^{2}+o(t^{2})$
 > > Sostituendo $t=\underline{p} -\underline{p_{0}}$ e $\hat{v}$ si ottiene la tesi
 <div class="page-break" style="page-break-before: always;"></div>
 

@@ -15,7 +15,7 @@
 > $f\in \mathrm{C}^{0}([a,b])$, $\gamma,\gamma^{*}:[a,b]\to \mathbb{R}^{n}$, $\gamma(t)=(t,f(t)),\gamma^{*}(t)=(f(t),t)$ sono dette curve piane cartesiane
 
 > [!osservazione]-
-> Se almeno una componente $\gamma_{i}$ p iniettiva $\implies \gamma$ è iniettiva
+> Se almeno una componente $\gamma_{i}$ è iniettiva $\implies \gamma$ è iniettiva
 
 # Orientazione di una curva semplice
 > [!definizione]

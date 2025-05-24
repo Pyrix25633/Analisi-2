@@ -7,5 +7,6 @@
     "downscalePercent": 85
   },
   "useMarkdownLinks": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true
 }

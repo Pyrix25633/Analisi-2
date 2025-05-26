@@ -170,7 +170,7 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 > $H_{f}(\underline{p})$ è simmetrica
 
 > [!teorema]
-> $T_{2}(\underline{p})=f(\underline{p_{0}})+\langle\nabla f(\underline{p}),(\underline{p} -\underline{p_{0}})\rangle+\langle\frac{1}{2}H_{f}(\underline{p})\cdot(\underline{p} -\underline{p_{0}})^{T},(\underline{p} -\underline{p_{0}})\rangle$
+> $T_{2}(\underline{p})=f(\underline{p_{0}})+\langle\nabla f(\underline{p}),(\underline{p} -\underline{p_{0}})\rangle+\frac{1}{2}\langle H_{f}(\underline{p})\cdot(\underline{p} -\underline{p_{0}})^{T},(\underline{p} -\underline{p_{0}})\rangle$
 > > [!dimostrazione]-
 > > $\underline{p} \in \mathrm{B}(\underline{p_{0}},r)$, $\hat{v}:=\frac{\underline{p} -\underline{p_{0}}}{||\underline{p} -\underline{p_{0}}||}=(v_{1},v_{2})$, $F(t):=f(\underline{p_{0}}+t\hat{v})\;\;t\in(-r,r)$
 > > Poiché $g(t)=\underline{p_{0}}+t\hat{v}\in \mathrm{C}^{2}((-r,r))$ anche $F(t)=f(g(t))\in \mathrm{C}^{2}((-r,r))$

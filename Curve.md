@@ -128,6 +128,12 @@
 > > &=\int_{\alpha}^{\beta}\langle F(\gamma(\varphi(\tau))),\gamma'(\varphi(\tau))\rangle \cdot \varphi'(\tau)\,d\tau=\int_{\varphi(\alpha)}^{\varphi(\beta)}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt={\dots} &&\end{flalign}$$
 <div class="page-break" style="page-break-before: always;"></div>
 
+> [!teorema]
+> $\gamma:[a,b]\to E\subset \mathbb{R}^{n}$ curva regolare, $F:E\to \mathbb{R}^{n}$ campo vettoriale su $E$ di classe $\mathrm{C}^{0}$, $\omega=\langle F,d\underline{x}\rangle$ forma differenziale
+> $$\begin{flalign}\implies \int_{\gamma}\omega=\int\langle F,T\rangle\,ds &&\end{flalign}$$
+> > [!dimostrazione]-
+> > $$\begin{flalign}{\dots}=\int_{a}^{b}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt=\int_{a}^{b}\langle F(\gamma(t)),T(t)\rangle\cdot ||\gamma'(t)||\,dt={\dots} &&\end{flalign}$$
+
 > [!osservazione]-
 > $\gamma:[a,b]\to E\subset \mathbb{R}^{n}$ regolare e semplice, $\omega=\langle F, d\underline{x}\rangle$ forma differenziale si classe $\mathrm{C}^{0}(E)$
 > $\implies \int_{\gamma}\omega=\int_{\gamma}\langle F,T_{\gamma}\rangle\,ds$
@@ -145,6 +151,7 @@
 > > Per ipotesi $\exists U$ potenziale di $\omega$ su $E$ tale che $\nabla U(\underline{x})=F(\underline{x})$
 > > $\frac{d}{dt}(U(\gamma(t)))=\langle \nabla U(\gamma(t)),\gamma'(t)\rangle=\langle F(\gamma(t)),\gamma'(t)\rangle\;\;\forall t\in[a,b]$
 > > $$\begin{flalign}{\dots}=\int_{a}^{b}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt=\int_{a}^{b} \frac{d}{dt}(U(\gamma(t)))\,dt=[U(\gamma(t))]_{a}^{b}={\dots} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!osservazione]-
 > $\gamma$ curva chiusa $\implies \oint_{\gamma}\omega=0$
@@ -154,7 +161,6 @@
 > $E\subset \mathbb{R}^{n}$ aperto, $\omega=\langle F,d\underline{x}\rangle$, $F:E\to \mathbb{R}^{n}$, $F(\underline{x})=(F_{1}(\underline{x}),\dots,F_{n}(\underline{x}))$, $F_{i}\in \mathrm{C}^{1}(E)$ ($i=1,\dots,n$)
 > $\omega$ si dice chiusa in $E$ se
 > $$\begin{flalign} \frac{\partial F_{i}}{\partial x_{j}}(\underline{x})=\frac{\partial F_{j}}{\partial x_{i}}(\underline{x})\;\;\forall \underline{x}\in E,\;i,j\in \{ 1,\dots,n \} &&\end{flalign}$$
-<div class="page-break" style="page-break-before: always;"></div>
 
 > [!teorema]
 > $\omega \in \mathrm{C}^{1}(E)$
@@ -172,3 +178,18 @@
 > $[\underline{p},\underline{q}]:=\{ t\underline{p}+(1-t)\underline{q}:0\leq t\leq_{1} \}\subset E\;\;\forall\underline{p},\underline{q}\in E$
 > $\omega \in \mathrm{C}^{1}(E)$
 > $\omega$ esatta in $E\iff \omega$ chiusa in $E$
+<div class="page-break" style="page-break-before: always;"></div>
+
+# Costruzione di un potenziale
+> [!formule] Formula
+> $E\subset \mathbb{R}^{n}$ convesso, $F:E\to \mathbb{R}^{n}$ campo vettoriale, $\omega=\langle F,d\underline{x}\rangle$ forma differenziale chiusa, allora è esatta ed esiste una funzione potenziale $U:E\to \mathbb{R}$ di $\omega$, $U\in \mathrm{C}^{2}(E):\nabla U(\underline{x})=F(\underline{x})$
+> Procedura, con ordine delle variabili interscambiabile:
+> $U(\underline{x})=\int F_{1}(\underline{x})\,dx_{1}=U_{1}(\underline{x})+C_{1}(x_{2},\dots,x_{n})$
+> $$\begin{flalign} \frac{\partial U}{\partial x_{2}}(\underline{x})=\frac{\partial U_{1}}{\partial x_{2}}(\underline{x})+\frac{\partial C_{1}}{\partial x_{2}}(x_{2},\dots,x_{n})=F_{2}(\underline{x}) &&\end{flalign}$$
+> $$\begin{flalign}\frac{\partial C_{1}}{\partial x_{2}}(x_{2},\dots,x_{n})=F_{2}(\underline{x})-\frac{\partial U_{1}}{\partial x_{2}}(\underline{x}) &&\end{flalign}$$
+> che è costante rispetto ad $x_{1}$
+> > [!dimostrazione]-
+> > $$\begin{flalign} \frac{ \partial F_{2} }{ \partial x_{1} } (\underline{x})-\frac{ \partial^{2}U_{1} }{ \partial x_{1}\partial x_{2} }(\underline{x}) =\frac{ \partial F_{2} }{ \partial x_{1} } (\underline{x})-\frac{ \partial^{2}U_{1} }{ \partial x_{2}\partial x_{1} }(\underline{x})=\frac{ \partial F_{2} }{ \partial x_{1} } (\underline{x})-\frac{ \partial F_{1} }{ \partial x_{2} } (\underline{x})=0  &&\end{flalign}$$
+> 
+> $$\begin{flalign}C_{1}(x_{2},\dots,x_{n})=\int \frac{ \partial C_{1} }{ \partial x_{2} }(x_{2},\dots x_{n})\,dx_{2} =U_{2}(x_{2},\dots,x_{n})+C_{2}(x_{3},\dots,x_{n}) &&\end{flalign}$$
+> Iterando: $U(\underline{x})=U_{1}(\underline{x})+U_{2}(x_{2},\dots ,x_{n})+{\dots}+U_{n}(x_{n})+c$

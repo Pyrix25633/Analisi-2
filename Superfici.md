@@ -36,7 +36,7 @@
 > Se $\gamma:[a,b]\to D$ di classe $\mathrm{C}^{1}$, $\gamma'(t_{0})\neq \underline{0}$, $\tilde{\gamma}=\sigma\circ \gamma$ è la corrispondente curva sulla superficie ed è di classe $\mathrm{C^{1}}$
 > Se $\tilde{\gamma}'(t_{0})\neq \underline{0}$ e la retta tangente a $\tilde{\gamma}$ passante per $\tilde{\gamma}(t_{0})$ appartiene a $\pi$ allora $\exists \pi$ piano tangente a $S$ in $\underline{p_{0}}$
 > Si vuole imporre $\tilde{\gamma}'(t_{0})=u'(t_{0})\cdot\sigma_{u}(u_{0},v_{0})+v'(t_{0})\cdot\sigma_{v}(u_{0},v_{0})\neq \underline{0}$
-> $\pi:\{ \underline{p_{0}}+\lambda\sigma_{u}(u_{0},v_{0})+\mu\sigma_{v}(u_{0},v_{0}):\lambda,\mu \in \mathbb{R} \}$ è il piano di equazione cartesiana $a(x-x_{0})+b(y-y_{0})+c(z-z_{0})+d=0$ con $(a,b,c):=\sigma_{u}(u_{0},v_{0})\times\sigma_{v}(u_{0},v_{0})\neq \underline{0}$ e $\underline{p_{0}}=(x_{0},y_{0},z_{0})$
+> $\pi:\{ \underline{p_{0}}+\lambda\sigma_{u}(u_{0},v_{0})+\mu\sigma_{v}(u_{0},v_{0}):\lambda,\mu \in \mathbb{R} \}$ è il piano di equazione cartesiana $a(x-x_{0})+b(y-y_{0})+c(z-z_{0})=0$ con $(a,b,c):=\sigma_{u}(u_{0},v_{0})\times\sigma_{v}(u_{0},v_{0})\neq \underline{0}$ e $\underline{p_{0}}=(x_{0},y_{0},z_{0})$
 > 
 > $\underline{p_{0}}\in S'$ si dice regolare se esistono $\mathrm{B}(\underline{p_{0}},r_{0})$ e $\sigma:\bar{D}\to \mathbb{R}^{3}$ parametrizzazione di $\overline{\mathrm{B}(\underline{p_{0}},r_{0})\cap S}$ tale che
 > - $\sigma$ è di classe $\mathrm{C}^{1}$

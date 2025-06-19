@@ -46,7 +46,7 @@
 ### Continuità
 > [!teorema]
 > $f:A\subset \mathbb{R}^{n}\to \mathbb{R}$, $A$ aperto, $f$ differenziabile in $\underline{p_{0}}\in A\implies f$ è continua in $\underline{p_{0}}$
-> > [!dimostrazione]
+> > [!dimostrazione]-
 > > $$\begin{flalign}\exists \lim_{ \underline{p} \to \underline{p_{0}} } \frac{f(\underline{p})-[df(\underline{p_{0}})(\underline{p}-\underline{p_{0}})+f(\underline{p_{0}})]}{\mathrm{d}(\underline{p},\underline{p_{0}})}=0 &&\end{flalign}$$
 > > $L(\hat{v})=df(\underline{p_{0}})(\hat{v})$
 $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L(\underline{p}-\underline{p_{0}})+f(\underline{p_{0}})]}{\mathrm{d}(\underline{p},\underline{p_{0}})} \cdot \mathrm{d}(\underline{p},\underline{p_{0}})+L(\underline{p}-\underline{p_{0}})&&\end{flalign}$$

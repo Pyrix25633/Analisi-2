@@ -197,7 +197,7 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 
 # Massimi e minimi
 > [!definizione]
-> $f:A\subset \mathbb{R}^{2}\to \mathbb{R}$
+> $f:A\subset \mathbb{R}^{n}\to \mathbb{R}$
 > $\underline{p_{0}}\in A$ si dice punto di
 > - massimo relativo di $f$ in $A$ se $\exists r_{0}>0:f(\underline{p})\leq f(\underline{p_{0}})\;\;\forall \underline{p} \in A\cap B(\underline{p_{0}},r_{0})$
 > - massimo assoluto di $f$ in $A$ se $f(\underline{p})\leq f(\underline{p_{0}})\;\;\forall \underline{p} \in A$
@@ -210,40 +210,39 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 > Non confondere punto di massimo e massimo di una funzione: $\mathrm{Max}_{A}f:=\mathrm{Max}\{ f(\underline{p}):p \in A \}$ se esiste è unico
 <div class="page-break" style="page-break-before: always;"></div>
 
-> [!teorema]
-> $A$ aperto, se $\exists \underline{p_{0}}\in A$ tale che:
+> [!teorema] Teorema di Fermat
+> $A\subset \mathbb{R}^{n}$ aperto, se $\exists \underline{p_{0}}\in A$ tale che:
 > - $\exists \nabla f(\underline{p_{0}})$
 > - $\underline{p_{0}}$ è un estremo libero di $f$ in $A$
 >   
 > $\implies \nabla f(\underline{p_{0}})=\underline{0}$
 > > [!dimostrazione]-
-> > $\underline{p_{0}}=(x_{0},y_{0})$, $A$ aperto $\implies \exists\delta>0:\underline{p_{0}}+t\underline{i}=(x_{0}+t,y_{0})\in A$ se $t\in(-\delta,\delta)$
-> > $F:(-\delta,\delta)\to \mathbb{R}$, $F(t)=f(\underline{p_{0}}+t\underline{i})$
-> > Dalle ipotesi:
-> > - $\exists \frac{\partial f}{\partial x}(\underline{p_{0}})\iff F$ è derivabile in $t=0$ e $F'(0)=\frac{\partial f}{\partial x}(\underline{p_{0}})$
-> > - $t=0$ è un estremo libero di $F$
+> > $A$ aperto $\implies \exists\delta>0:\underline{p_{0}}+t\hat{e_{i}}\in A$ se $t\in(-\delta,\delta)$
+> > $F_{i}:(-\delta,\delta)\to \mathbb{R}$, $F_{i}(t)=f(\underline{p_{0}}+t\hat{e_{i}})$
+> > Dalle ipotesi, $\forall i\in \{ 1,\dots,n \}$:
+> > - $\exists \frac{\partial f}{\partial x_{i}}(\underline{p_{0}})\iff F$ è derivabile in $t=0$ e $F_{i}'(0)=\frac{\partial f}{\partial x_{i}}(\underline{p_{0}})$
+> > - $t=0$ è un estremo libero di $F_{i}$
 > > 
-> > Per il teorema in una variabile $F'(0)=0$, analogamente per $\underline{j}\implies \nabla f(\underline{p_{0}})=(0,0)=\underline{0}$
+> > Per il teorema in una variabile $F_{i}'(0)=0$ $\implies \nabla f(\underline{p_{0}})=(0,\dots,0)=\underline{0}$
 
 > [!definizione]
 > Un punto $\underline{p_{0}}\in A$ si chiama punto stazionario o critico di $f$ se $\exists \nabla f(\underline{p_{0}})=\underline{0}$
 
 # Matrice positiva
 > [!definizione]
-> $H\in M_{n}(\mathbb{R})$ si dice:
-> - positiva se $H\hat{v}\cdot \hat{v}>0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
-> - semi-definita positiva se $H\hat{v}\cdot \hat{v}\geq0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
-> - negativa se $H\hat{v}\cdot \hat{v}<0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
-> - semi-definita negativa se $H\hat{v}\cdot \hat{v}\leq0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+> $H=[h_{ij}]\in M_{n}(\mathbb{R})$ si dice:
+> - positiva se $\langle H\cdot\hat{v}, \hat{v}\rangle>0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+> - semi-definita positiva se $\langle H\cdot\hat{v}, \hat{v}\rangle\geq0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+> - negativa se $\langle H\cdot\hat{v}, \hat{v}\rangle<0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
+> - semi-definita negativa se $\langle H\cdot\hat{v}, \hat{v}\rangle\leq0\;\;\forall \hat{v}\in \mathbb{R}^{n}\setminus \{ \underline{0} \}$
 > 
-> $H=[h_{ij}]\in M_{n}(\mathbb{R})$
 > $$\begin{flalign}D_{i}:=\det \begin{bmatrix}
 h_{11} & \dots & h_{1i}\\
 \dots & & \dots \\
 h_{i_{1}} & \dots & h_{ii}
 \end{bmatrix}\;\;1\leq i\leq n &&\end{flalign}$$
 > $H$ è:
-> - positiva $\iff D_{i}>0\;\;\forall i=1,\dots,n$
+> - positiva $\iff D_{i}>0\;\;\forall i\in\{ 1,\dots,n \}$
 > - negativa $\iff D_{i}>0$ per $i$ pari, $D_{i}<0$ per $i$ dispari
 > - se $\det(H)\neq0$ e nessuna delle condizioni precedenti $\implies$ non è semi-definita
 <div class="page-break" style="page-break-before: always;"></div>
@@ -265,15 +264,15 @@ h_{i_{1}} & \dots & h_{ii}
 # Teorema di Weierstrass
 > [!teorema]
 > $f:A\subset \mathbb{R}^{n}\to \mathbb{R}$ continua su $A$ limitato e chiuso
-> $\implies \exists \mathrm{Max}_{A}f=f(p_{1})\land \exists \mathrm{Min}_{A}f=f(p_{2})\;\;\underline{p_{i}}\in A\;\;i=1,\dots,n$
-> si verifica una delle seguenti per ogni punto:
+> $\implies \exists \mathrm{Max}_{A}f=f(\underline{p_{1}})\land \exists \mathrm{Min}_{A}f=f(\underline{p_{2}})$
+> Per $\underline{p_{i}}\in A\;\;i=1,2$ si verifica una delle seguenti:
 > - $\underline{p_{i}}\in \mathring{A} \land \exists \nabla f(\underline{p_{i}})=\underline{0}$
 > - $\underline{p_{i}}\in\mathring{A} \land \nexists \nabla f(\underline{p_{i}})$
 > - $\underline{p_{i}}\in \partial A$
 
 # Parametrizzazione
 > [!definizione]
-> Si chiama parametrizzazione della frontiera $\partial A$ una funzione $\gamma:B\subset \mathbb{R}^{n}\to A\subset \mathbb{R}^{n+1}$, $\gamma(t_{1},\dots,t_{n})=(\gamma_{1}(t),\dots,\gamma_{n+1}(t))$, con le seguenti proprietà:
+> Si chiama parametrizzazione della frontiera $\partial A$ una funzione $\gamma:B\subset \mathbb{R}^{n}\to A\subset \mathbb{R}^{n+1}$, $\gamma(t_{1},\dots,t_{n})=(\gamma_{1}(t_{1},\dots,t_{n}),\dots,\gamma_{n+1}(t_{1},\dots,t_{n}))$, con le seguenti proprietà:
 > - $B$ chiuso e limitato
 > - $\gamma(B)=\partial A$
 > - $\gamma_{1},\dots ,\gamma_{n+1}\in \mathrm{C}^{0}(B)\cap \mathrm{C}^{1}(\mathring{B})$
@@ -311,8 +310,8 @@ g(x,y)=0 \\
 <div class="page-break" style="page-break-before: always;"></div>
 
 > [!teorema]
-> Se $g(\underline{p_{0}})=0$ e $\exists \frac{\partial g}{\partial y}(\underline{p_{0}})\neq0$ (o analogamente con $x$) $\implies V$ è localmente grafico di una funzione $y=\varphi(x)$, cioè $\exists\delta>0$ e $\varphi:(x_{0}-\delta,x_{0}+\delta)\to \mathbb{R}$, $\exists r>0$ tali che
-> - $V\cap \mathrm{B}(\underline{p_{0}},r)=\{ (x,\varphi(x)):x \in(x_{0}-\delta,x_{0}+\delta) \}$
+> Se $g(\underline{p_{0}})=0$ e $\exists \frac{\partial g}{\partial y}(\underline{p_{0}})\neq0$ (o analogamente con $x$) $\implies V$ è localmente grafico di una funzione $y=\varphi(x)$, cioè $\exists\delta>0$ e $\varphi:(x_{0}-\delta,x_{0}+\delta)\to \mathbb{R}$, $\exists r_{0}>0$ tali che
+> - $V\cap \mathrm{B}(\underline{p_{0}},r_{0})=\{ (x,\varphi(x)):x \in(x_{0}-\delta,x_{0}+\delta) \}$
 > - $\varphi$ è derivabile e $$\begin{flalign}\varphi'(x)=- \frac{\frac{\partial g}{\partial x}(x,\varphi(x))}{\frac{\partial g}{\partial y}(x,\varphi(x))}\;\;\forall x \in(x_{0}-\delta,x_{0}+\delta) &&\end{flalign}$$
 
 > [!dimostrazione]- Dimostrazione del teorema dei moltiplicatori di Lagrange
@@ -326,7 +325,9 @@ g(x,y)=0 \\
 \end{bmatrix}=\det \begin{bmatrix}
 \nabla f(\underline{p_{0}}) \\
 \nabla g(\underline{p_{0}})
-\end{bmatrix}=0\iff \exists \lambda_{0}\in \mathbb{R}:\nabla f(\underline{p_{0}})=-\lambda_{0}\cdot \nabla g(\underline{p_{0}}) &&\end{flalign}$$
+\end{bmatrix}=0 &&\end{flalign}$$
+> $\iff \exists \lambda_{0}\in \mathbb{R}:\nabla f(\underline{p_{0}})=-\lambda_{0}\cdot \nabla g(\underline{p_{0}})$
+
 
 > [!teorema]
 > $f,g\in \mathrm{C}^{1}(\mathbb{R}^{3})$, $V:=\{ (x,y,z)\in\mathbb{R}^{3}: g(x,y,z)=0\}$

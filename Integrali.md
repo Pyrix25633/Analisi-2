@@ -19,7 +19,7 @@
 &s(f,\mathcal{D}):=\sum_{i=1}^{m} \sum_{j=1}^{n} m_{ij}\cdot \mathrm{area}(A_{ij})&&\end{flalign}$$
 > Proprietà:
 > - Se $f\geq0$, $M_{ij}\cdot \mathrm{area}(A_{ij})$ e $m_{ij}\cdot \mathrm{area}(A_{ij})$ rappresentano il volume di un parallelepipedo che approssima il grafico per eccesso e per difetto
-> - $\mathrm{area}(A_{ij})\cdot \mathrm{inf}_{A_{ij}}\{ f \}\leq s(f,\mathcal{D})\leq S(f,\mathcal{D})\leq \mathrm{area}(A_{ij})\cdot \mathrm{sup}_{A_{ij}}\{ f \}$
+> - $\mathrm{area}(A)\cdot \mathrm{inf}_{A}\{ f \}\leq s(f,\mathcal{D})\leq S(f,\mathcal{D})\leq \mathrm{area}(A)\cdot \mathrm{sup}_{A}\{ f \}$
 > - $\mathcal{D}',\mathcal{D}''$ suddivisioni qualunque, $s(f,\mathcal{D}')\leq S(f,\mathcal{D}'')$
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -49,7 +49,7 @@ $g\leq f\implies \iint_{A}g\leq \iint_{A}f$
 
 # Formula di riduzione sui rettangoli
 > [!formule] Formula
-> Se $\forall y\in[c,d]\;\;x \in[a,b]\to f(x,y)$ è integrabile $\implies \forall x \in[a,b]\;\;y\in[c,d]\to f(x,y)$ è integrabile e
+> Se $\forall y\in[c,d]\;\;x \in[a,b]\to f(x,y)$ è integrabile $\implies y\in[c,d]\to \int_{a}^{b} f(x,y)\,dx$ è integrabile e
 > $$\begin{flalign}\iint_{A}f=\int_{c}^{d} \int_{a}^{b}f(x,y)\,dx\,dy &&\end{flalign}$$
 > Viceversa in modo analogo
 > 
@@ -59,8 +59,8 @@ $g\leq f\implies \iint_{A}g\leq \iint_{A}f$
 # Integrale doppio su un insieme generale
 > [!definizione]
 > Se $A\subset \mathbb{R}^{2}$ è limitato ma non rettangolare è possibile definire una nuova funzione
-> $A\subset Q=[a,b]\times[c,d]$, $\tilde{f}:Q\to \mathbb{R}$
-> $$\begin{flalign}\tilde{f}(x,y)=\begin{cases}
+> $A\subset Q:=[a,b]\times[c,d]$, $\tilde{f}:Q\to \mathbb{R}$
+> $$\begin{flalign}\tilde{f}(x,y):=\begin{cases}
 f(x,y),&(x,y)\in A \\
 0,&(x,y)\in Q\setminus A
 \end{cases} &&\end{flalign}$$
@@ -127,8 +127,8 @@ $$\begin{flalign}\implies \iint_{A}f=\iint_{\mathring{A}}f &&\end{flalign}$$
 
 # Additività dell'integrale doppio
 > [!teorema]
-> $A_{1},\dots,A_{m}\subset \mathbb{R}^{2}$ insiemi semplici tali che $A_{i}\cap A_{j}\subset \partial A_{i}\cap \partial A_{j}\;\;\forall i,j=1,\dots,m\land i\neq j$,
-> $B=A_{1}\cup{\dots}\cup A_{m}$,  $f:B\to \mathbb{R}$ tale che $f\in\mathcal{R}(A_{i})\;\;\forall i=1,\dots,m$
+> $A_{1},\dots,A_{m}\subset \mathbb{R}^{2}$ insiemi semplici tali che $A_{i}\cap A_{j}\subset \partial A_{i}\cap \partial A_{j}\;\;\forall i,j\in\{ 1,\dots,m \}\land i\neq j$,
+> $B=A_{1}\cup{\dots}\cup A_{m}$,  $f:B\to \mathbb{R}$ tale che $f\in\mathcal{R}(A_{i})\;\;\forall i\in \{ 1,\dots,m \}$
 > $\implies f\in\mathcal{R}(B)$ e $$\begin{flalign}\iint_{B}f=\sum_{i=1}^{m}\iint_{A_{i}}f &&\end{flalign}$$
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -200,7 +200,7 @@ $g\leq f\implies \iiint_{A}g\leq \iiint_{A}f$
 > $$\begin{flalign}\mathrm{inf}_{A}\{ f \}\leq \frac{1}{\mathrm{vol}(A)}\iint_{A}f=w_{0}\leq \mathrm{sup}_{A}\{ f \} &&\end{flalign}$$
 > Inoltre se $f\in \mathrm{C}^{0}(A)\implies \exists \underline{p_{0}}:f(\underline{p_{0}})=w_{0}$
 
-# Formule di riduzione sui rettangoli
+# Formule di riduzione sui parallelepipedi
 > [!formule]
 > $A=[a_{1},b_{1}]\times[a_{2},b_{2}]\times[a_{3},b_{3}]$, $f\in \mathrm{C}^{0}(A)$
 > 
@@ -268,7 +268,7 @@ f(x,y,z),&(x,y,z)\in A \\
 > $$\begin{flalign}\implies \iiint_{A}f=\iiint_{B}f &&\end{flalign}$$
 <div class="page-break" style="page-break-before: always;"></div>
 
-# Integrale triplo su un dominio semplice e formula di riduzione
+# Integrale triplo su un dominio semplice e formule di riduzione
 > [!definizione]
 > $A\subset \mathbb{R}^{3}$ si dice semplice o normale rispetto all'asse $z$ se
 > - $\exists g_{1},g_{2}\in \mathrm{C}^{0}(E):g_{1}\leq g_{2}$ su $E\in \mathbb{R}^{2}$
@@ -278,17 +278,34 @@ f(x,y,z),&(x,y,z)\in A \\
 > Un dominio semplice è limitato e misurabile
 
 > [!formule]
+> Formula generale di riduzione per fili
 > $A\subset \mathbb{R}^{3}$ semplice rispetto a $z$, $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$ e
-> $$\begin{flalign}\iiint_{A}f=\iint_{E}\left(\int_{g_{1}(x,y)}^{g_{2}(x,y)}f(x,y,z)\,dz\right)\,dy\,dx &&\end{flalign}$$
+> $$\begin{flalign}\iiint_{A}f=\iint_{E}\left(\int_{g_{1}(x,y)}^{g_{2}(x,y)}f(x,y,z)\,dz\right)\,dx\,dy &&\end{flalign}$$
 > Analogamente per $x$ e $y$
-
-> [!teorema]
+> 
+> Formula generale di riduzione per strati
 > $A\subset \mathbb{R}^{3}$ limitato e misurabile, $A=A\cap(\mathbb{R}\times \mathbb{R}\times[a,b])$
 > $A_{z}:=\{ (x,y)\in \mathbb{R}^{2}:(x,y,z)\in A \}$ misurabile, $f\in \mathrm{C}^{0}(A)\implies f\in\mathcal{R}(A)$ e
 > $$\begin{flalign}\iiint_{A}f=\int_{a}^{b}\left(\iint_{A_{z}}f(x,y,z)\,dx\,dy\right)\,dz &&\end{flalign}$$
+> Analogamente per $x$ e $y$
 
 > [!approfondimento]- Applicazione della riduzione per strati al volume di un solido per rotazione
 > $A=\{ (x,y,z)\in \mathbb{R}^{3}:z\in[a,b]\land x^{2}+y^{2}\leq g(z)^{2} \}$, $g\in \mathrm{C}^{0}([a,b])$, $g(z)\geq0\;\;\forall z\in[a,b]$
 > $A$ può essere visto come la rotazione di $F=\{ (y,z)\in \mathbb{R}^{2}:z\in[a,b]\land0\leq y\leq g(z) \}$ (o analogamente per $x$)
 > $A_{z}=\{ (x,y)\in \mathbb{R}^{2}:x^{2}+y^{2}\leq g(z)^{2} \}$ è uno strato, più nello specifico un cerchio di area $\mathrm{area}(A_{z})=|A_{z}|_{2}=\pi\cdot g(z)^{2}$ e
 > $$\begin{flalign}|A|_{3}&=\iiint_{A}1=\int_{a}^{b}\left(\iint_{A_{z}}1\,dx\,dy\right)\,dz=\int_{a}^{b}\mathrm{area}(A_{z})\,dz=\pi \int_{a}^{b}g(z)^{2}\,dz &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
+
+# Sostituzione di variabili
+> [!definizione]
+> $D,D^{*}\subset \mathbb{R}^{3}$ aperti, limitati e misurabili, $\psi:D^{*}\to D$, $\psi(u,v,w)=(\psi_{1}(u,v,w),\psi_{2}(u,v,w),\psi_{3}(u,v,w))$
+> La mappa $\psi$ si dice cambiamento o sostituzione di variabili se:
+> - è biiettiva
+> - $\psi_{i}\in \mathrm{C}^{1}(D^{*})$ e $\psi_{i}, \frac{\partial \psi_{i}}{\partial u}, \frac{\partial \psi_{i}}{\partial v}, \frac{\partial \psi_{i}}{\partial w}:D^{*}\to \mathbb{R}$ sono limitate ($i=1,2,3$)
+> - $\det(J_{\psi}(u,v,w))\neq0\;\;\forall(u,v,w)\in D^{*}$
+> 
+> Per definizione $dD^{*}=du\,dv\,dw$, $dD=dx\,dy\,dz$ e per la sostituzione $dD=|\det(J_{\psi}(u,v,w))|dD^{*}$
+
+> [!teorema]
+> $D,D^{*}\subset \mathbb{R}^{3}$ aperti, limitati e misurabili, $\psi:D^{*}\to D$ cambiamento di variabili
+> $$\begin{flalign}\iiint_{D}f(x,y,z)\,dx\,dy\,dz=\iint_{D^{*}}f(\psi(u,v,w))\cdot |\det(J_{\psi}(u,v,w))|\,du\,dv\,dw &&\end{flalign}$$

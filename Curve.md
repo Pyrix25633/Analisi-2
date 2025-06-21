@@ -45,7 +45,7 @@
 > [!definizione]
 > $\gamma:I\to \mathbb{R}^{n},\tilde{\gamma}:\tilde{I}\to \mathbb{R}^{n}$ di classe $\mathrm{C}^{1}$ si dicono equivalenti se $\exists \varphi:\tilde{I}\to I$ biiettiva tale che $\varphi \in \mathrm{C}^{1}(\tilde{I})$, $\varphi'(\tau)\neq0$ e $\tilde{\gamma}(\tau)=\gamma(\varphi(\tau))\;\;\forall \tau \in \tilde{I}$
 > $\tau \in \tilde{I}\to t=\varphi(\tau)\in I$ si dice cambiamento di parametrizzazione
-> Inoltre $\Gamma=\gamma([a,b])=\tilde{\gamma}([\alpha,\beta])$
+> Inoltre $\Gamma=\gamma(I)=\tilde{\gamma}(\tilde{I})$
 
 > [!osservazione]-
 > Se $\varphi(\tau)>0\;\;\forall \tau \in \tilde{I}$ allora $\gamma$ e $\tilde{\gamma}$ hanno lo stesso verso, altrimenti se $\varphi(\tau)<0\;\;\forall \tau \in \tilde{I}$ hanno verso opposto
@@ -108,7 +108,7 @@
 > [!definizione]
 > $F:E\to \mathbb{R}^{n}$ campo vettoriale
 > Si chiama forma differenziale su $E$ l'espressione formale
-> $\omega=F_{1}dx_{1}+{\dots+F_{n}dx_{n}}=\sum_{i=1}^{n}F_{i}dx_{i}=\langle F,d\underline{x}\rangle$
+> $\omega:=F_{1}dx_{1}+{\dots}+F_{n}dx_{n}=\sum_{i=1}^{n}F_{i}dx_{i}=\langle F,d\underline{x}\rangle$
 > Una forma differenziale $\omega$ su $E$ si dice di classe $\mathrm{C}^{0}$ (o $\mathrm{C}^{1}$) se $F_{i}\in \mathrm{C}^{0}(E)\;\;\forall i\in \{ 1,\dots,n \}$ (o $F_{i}\in \mathrm{C}^{1}(E)$)
 
 > [!definizione]
@@ -130,9 +130,9 @@
 
 > [!teorema]
 > $\gamma:[a,b]\to E\subset \mathbb{R}^{n}$ curva regolare, $F:E\to \mathbb{R}^{n}$ campo vettoriale su $E$ di classe $\mathrm{C}^{0}$, $\omega=\langle F,d\underline{x}\rangle$ forma differenziale
-> $$\begin{flalign}\implies \int_{\gamma}\omega=\int\langle F,T\rangle\,ds &&\end{flalign}$$
+> $$\begin{flalign}\implies \int_{\gamma}\omega=\int_{\gamma}\langle F,T_{\gamma}\rangle\,ds &&\end{flalign}$$
 > > [!dimostrazione]-
-> > $$\begin{flalign}{\dots}=\int_{a}^{b}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt=\int_{a}^{b}\langle F(\gamma(t)),T(t)\rangle\cdot ||\gamma'(t)||\,dt={\dots} &&\end{flalign}$$
+> > $$\begin{flalign}{\dots}=\int_{a}^{b}\langle F(\gamma(t)),\gamma'(t)\rangle\,dt=\int_{a}^{b}\langle F(\gamma(t)),T_{\gamma}(t)\rangle\cdot ||\gamma'(t)||\,dt={\dots} &&\end{flalign}$$
 
 > [!osservazione]-
 > $\gamma:[a,b]\to E\subset \mathbb{R}^{n}$ regolare e semplice, $\omega=\langle F, d\underline{x}\rangle$ forma differenziale si classe $\mathrm{C}^{0}(E)$
@@ -140,7 +140,7 @@
 
 # Forme differenziali esatte
 > [!definizione]
-> $E\subset \mathbb{R}^{n}$ aperto, $U\in \mathrm{C}^{1}(E)$, $\omega=\langle F,d\underline{x}\rangle$, $F:E\to \mathbb{R}^{n}$
+> $E\subset \mathbb{R}^{n}$ aperto, $U\in \mathrm{C}^{1}(E)$, $F:E\to \mathbb{R}^{n}$, $\omega=\langle F,d\underline{x}\rangle$
 > $dU=\langle \nabla U,d\underline{x}\rangle=\frac{\partial U}{\partial x_{1}}dx_{1}+{\dots}+\frac{\partial U}{\partial x_{n}}dx_{n}$ viene chiamata forma differenziale di $U$
 > $\omega$ si dice esatta se $\exists U:\nabla U(\underline{x})=F(\underline{x})\;\;\forall \underline{x}\in E$, equivalentemente $dU=\omega$ e $U$ è detta **funzione potenziale** di $\omega$ (o anche di $F$) in $E$
 
@@ -168,7 +168,7 @@
 > > [!dimostrazione]-
 > > Per ipotesi $\exists U$ potenziale e $\frac{\partial U}{\partial x_{i}}=F_{i}(\underline{x})$ ($i=1,\dots,n$)
 > > Essendo $U\in \mathrm{C}^{2}(E)$
-> > $$\begin{flalign}{\dots}=\frac{\partial^{2}U}{\partial x_{j}x_{i}}(\underline{x})=\frac{\partial^{2}U}{\partial x_{i}x_{j}}(\underline{x})={\dots} &&\end{flalign}$$
+> > $$\begin{flalign}{\dots}=\frac{\partial^{2}U}{\partial x_{j}\partial x_{i}}(\underline{x})=\frac{\partial^{2}U}{\partial x_{i}\partial x_{j}}(\underline{x})={\dots} &&\end{flalign}$$
 
 > [!osservazione]-
 > $\omega$ non chiusa in $E\implies$ $\omega$ non esatta in $E$

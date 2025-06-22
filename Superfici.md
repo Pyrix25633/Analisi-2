@@ -51,18 +51,18 @@
 > [!definizione]
 > $S\subset \mathbb{R}^{3}$ superficie regolare, $\sigma:\bar{D}\subset \mathbb{R}^{2}\to \mathbb{R}^{3}$ sua parametrizzazione di classe $\mathrm{C}^{1}$
 > $Q=[u_{0},u_{0}+du]\times[vo,v_{0}+dv]$ è l'elemento infinitesimo di area
-> Se $(u,v)\to(u_{0},v_{0})$, $\sigma(u,v)=\sigma(u_{0},v_{0})+J_{\sigma}(u_{0},v_{0})\cdot(u-u_{0},v-v_{0})^{T}+o(||(u-u_{0},v-v_{0})||)$
+> Se $(u,v)\to(u_{0},v_{0})$, $\sigma(u,v)=\sigma(u_{0},v_{0})+\langle J_{\sigma}(u_{0},v_{0}),(u-u_{0},v-v_{0})^{T}\rangle+o(||(u-u_{0},v-v_{0})||)$
 > $\tilde{Q}:=\{ \sigma(u_{0},v_{0})+\lambda\sigma_{u}(u_{0},v_{0})+\mu\sigma_{v}(u_{0},v_{0}):0\leq\lambda\leq du\land0\leq \mu\leq dv \}=\sigma(Q)$
-> $\mathrm{area}(\tilde{Q})=||\sigma_{u}(u_{0},vo)\times\sigma_{v}(u_{0},v_{0})||\,du\,dv=dS$
-> Si chiama area di $S$ se $||\sigma_{u}(u_{0},vo)\times\sigma_{v}(u_{0},v_{0})||$ è limitata $\forall(u,v)\in D$ e quindi è ben definita
-> $$\begin{flalign}\mathrm{area}(S):=\iint_{S}dS=\iint_{D}||\sigma_{u}(u_{0},vo)\times\sigma_{v}(u_{0},v_{0})||\,du\,dv &&\end{flalign}$$
+> $\mathrm{area}(\tilde{Q})=||\sigma_{u}(u_{0},v_{0})\times\sigma_{v}(u_{0},v_{0})||\,du\,dv=dS$
+> Si chiama area di $S$ se $||\sigma_{u}(u,v)\times\sigma_{v}(,v)||$ è limitata $\forall(u,v)\in D$ e quindi è ben definita
+> $$\begin{flalign}\mathrm{area}(S):=\iint_{S}dS=\iint_{D}||\sigma_{u}(u,v)\times\sigma_{v}(u,v)||\,du\,dv &&\end{flalign}$$
 
 > [!osservazione]-
-> $D\subset \mathbb{R}^{2}$ interno di una curva di Jordan, $f\in \mathrm{C}\mathrm{0}(\bar{D})$, $f\in \mathrm{C}^{1}(D)$, $\sigma:D\to \mathbb{R}^{3}$ superficie cartesiana parametrizzazione di $S\subset \mathbb{R}^{3}$
+> $D\subset \mathbb{R}^{2}$ interno di una curva di Jordan, $f\in \mathrm{C}^{0}(\bar{D})\cap \mathrm{C}^{1}(D)$, $\sigma:D\to \mathbb{R}^{3}$ superficie cartesiana parametrizzazione di $S\subset \mathbb{R}^{3}$
 > $$\begin{flalign}\mathrm{area}(S)=\iint_{D}\sqrt{1+||\nabla f(u,v)||^{2}}\,du\,dv &&\end{flalign}$$
 
 # Integrale di superficie
 > [!definizione]
-> $S\subset \mathbb{R}^{3}$ superficie regolare parametrizzata da $\sigma:\bar{D}\to \mathbb{R}^{3}$ tale che $D$ è misurabile e $||\sigma_{u}(u_{0},vo)\times\sigma_{v}(u_{0},v_{0})||$ è limitata, $f:S'\to \mathbb{R}$ continua e limitata
-> $$\begin{flalign}\iint_{S}f\,dS=\iint_{D}f\cdot||\sigma_{u}(u_{0},vo)\times\sigma_{v}(u_{0},v_{0})||\,du\,dv &&\end{flalign}$$
+> $S\subset \mathbb{R}^{3}$ superficie regolare parametrizzata da $\sigma:\bar{D}\subset \mathbb{R}^{2}\to \mathbb{R}^{3}$ tale che $D$ è misurabile e $||\sigma_{u}(u,v)\times\sigma_{v}(u,v)||$ è limitata $\forall(u,v)\in D$, $f:S'\to \mathbb{R}$ continua e limitata
+> $$\begin{flalign}\iint_{S}f\,dS:=\iint_{D}f\cdot||\sigma_{u}(u,v)\times\sigma_{v}(u,v)||\,du\,dv &&\end{flalign}$$
 > si chiama integrale di superficie di $f$ su $S$

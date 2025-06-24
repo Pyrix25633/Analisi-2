@@ -128,7 +128,7 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 
 # Derivate parziali di una funzione composta
 > [!teorema]
-> $g:A\subset \mathbb{R}^{n}\to \mathbb{R}^{m},f:B\subset \mathbb{R}^{m}\to \mathbb{R}^{k}$
+> $g:A\subset \mathbb{R}^{n}\to \mathbb{R}^{m}$, $f:B\subset \mathbb{R}^{m}\to \mathbb{R}^{k}$
 > Se:
 > - $g(A)\subset B$
 > - $g=(g_{1},\dots,g_{m}),f=(f_{1},\dots,f_{k})$
@@ -136,14 +136,16 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 > - $f_{j}:B\to \mathbb{R}$ differenziabile in $\underline{y_{0}}=g(\underline{x_{0}})\in B\;\;\forall j\in \{ 1,\dots,k \}$
 > - $h:=f\circ g$
 > 
-> $$\begin{flalign}\implies J_{h}(\underline{x_{0}})=J_{f}(\underline{y_{0}})\cdot J_{g}(\underline{x_{0}})=\begin{bmatrix}\nabla f_{1}(\underline{y_{0}}) \\
-\dots \\
-\nabla f_{k}(\underline{y_{0}})
-\end{bmatrix}\cdot \begin{bmatrix}
-\nabla g_{1}(\underline{x_{0}}) \\
-\dots \\
-\nabla g_{m}(\underline{x_{0}})
-\end{bmatrix} &&\end{flalign}$$
+> $$\begin{flalign}\implies J_{h}(\underline{x_{0}})=J_{f}(\underline{y_{0}})\cdot J_{g}(\underline{x_{0}}) &&\end{flalign}$$
+> 
+> > [!dimostrazione]-
+> > $g:A\subset \mathbb{R}\to \mathbb{R}^{2}$, $f:B\subset \mathbb{R}^{2}\to \mathbb{R}$, $\underline{p_{0}}=g(t_{0})$
+> > $f(\underline{p})=f(\underline{p_{0}})+\langle\nabla f(\underline{p_{0}}),(\underline{p}-\underline{p_{0}})\rangle+o(||\underline{p}-\underline{p_{0}}||)$
+> > $f(g(t))=f(g(t_{0}))+\langle\nabla f(g(t_{0})),(g(t)-g(t_{0}))\rangle+o(||g(t)-g(t_{0})||)$
+> > $$\begin{flalign}\frac{f(g(t))-f(g(t_{0}))}{t-t_{0}}=\frac{\langle\nabla f(g(t_{0})),(g(t)-g(t_{0}))\rangle}{t-t_{0}}+\frac{o(||g(t)-g(t_{0})||)}{t-t_{0}} &&\end{flalign}$$
+> > $$\begin{flalign}\lim_{ t \to t_{0} }  \frac{f(g(t))-f(g(t_{0}))}{t-t_{0}}=\lim_{ t \to t_{0} } \left\langle \nabla f(g(t_{0})),\frac{g(t)-g(t_{0})}{t-t_{0}} \right\rangle&&\end{flalign}$$
+> > $\implies h'(t_{0})=\nabla f(\underline{p_{0}})\cdot g'(t_{0})$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Derivate parziali di ordine superiore
 > [!definizione]
@@ -155,7 +157,6 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 
 > [!teorema] Teorema di Schwarz
 > Se le derivate parziali seconde miste sono continue $\implies$ coincidono
-<div class="page-break" style="page-break-before: always;"></div>
 
 # Polinomi di Taylor
 > [!definizione]
@@ -177,10 +178,10 @@ $$\begin{flalign}f(\underline{p})-f(\underline{p_{0}})=\frac{f(\underline{p})-[L
 \dots \\
 \nabla\left( \frac{\partial f}{\partial x_{n}} \right)(\underline{p})
 \end{bmatrix} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!osservazione]-
 > $H_{f}(\underline{p})$ è simmetrica
-<div class="page-break" style="page-break-before: always;"></div>
 
 > [!teorema]
 > $T_{2}(\underline{p})=f(\underline{p_{0}})+\langle\nabla f(\underline{p}),(\underline{p} -\underline{p_{0}})\rangle+\frac{1}{2}\langle H_{f}(\underline{p})\cdot(\underline{p} -\underline{p_{0}})^{T},(\underline{p} -\underline{p_{0}})\rangle$
